@@ -1,0 +1,155 @@
+ngs` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+Creating QA chain using the latest recommended methods...
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1760939006.127823   42012 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+--- RAG pipeline setup complete. ---
+
+Query: What is the submission deadline for the final project report?
+
+Answer: The submission deadline for the final project report is 12/15 (Mon.) 23:59.
+
+--- Sources ---
+Page: 3, Content: "presentation,
+
+and
+
+final
+
+project
+
+presentation
+
+will
+
+be
+
+graded
+
+on
+
+your
+
+presentation
+
+performance
+
+alone,
+
+and
+
+do
+
+not
+
+require
+
+any
+
+file
+
+submission.
+
+1.  The  submission ..."
+Page: 0, Content: "below
+
+(“Topics
+
+Introduction”
+
+section)
+
+for
+
+your
+
+reference
+
+and
+
+inspiration
+
+of
+
+your
+
+project.
+
+Grading
+The  final  project  score  is  composed  of  four  parts  (total  40%):
+●..."
+Page: 1, Content: "inputs/outputs,
+
+variables,
+
+factors,
+
+states,
+
+etc.)?
+ ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic
+evaluation
+
+metric
+
+you
+
+will
+
+use
+
+for
+
+qu..."
+Page: 3, Content: "that
+
+you
+
+have
+
+run.
+
+If
+
+your
+
+results
+
+are
+
+creative
+
+and
+
+can’t
+
+find
+
+a
+
+proper
+
+baseline,
+
+then
+
+you
+
+can
+
+analyze
+
+how
+
+you
+
+get
+
+the
+
+results
+
+you
+
+want.
+ ○  Future  W..."
