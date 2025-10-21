@@ -57,21 +57,76 @@
    setx GOOGLE_API_KEY "API金鑰"  
    ```
 
-## 使用方法
-完成所有設定後，直接執行主程式：
+## 工作流程與使用方法
+
+本專案包含三個主要腳本，其標準工作流程如下：
+
+### 步驟 1: 準備文件
+
+將所有你希望納入知識庫的 PDF 檔案放入 `Dataset` 資料夾中。
+
+### 步驟 2: 產生 Chunk 資料
+
+執行 `prepare_data.py` 腳本。這個腳本會讀取 `Dataset` 資料夾中的所有 PDF，將它們切割成帶有全域唯一 ID 的文本區塊 (chunks)，並將結果儲存為 `chunks.json`。
+
 ```bash
+# 啟用虛擬環境後執行
+python prepare_data.py
+```
+
+`chunks.json` 是後續所有流程的「單一事實來源」，只在此步驟進行文件切割。
+
+### 步驟 3: 互動式問答
+
+若想與特定文件進行互動式問答，可以直接執行 `rag_baseline.py`。腳本內預設會載入 `114-1 IR Final Project Requirements.pdf`。
+
+```bash
+# 啟用虛擬環境後執行
 python rag_baseline.py
 ```
-程式啟動後會先載入或建立向量資料庫，然後回答一個內建的範例問題  
-之後，就可以在命令列中輸入自己的問題並按Enter提問  
 
-若要結束程式，輸入`exit`並按Enter  
+程式會為指定文件建立 RAG 流程，並進入互動模式。若要更換問答的目標文件，請直接修改 `rag_baseline.py` 中 `if __name__ == "__main__":` 區塊裡的 `pdf_to_query_name` 變數。
 
+## 評估流程
 
-## 客製化與調整
-可以在 `rag_baseline.py`檔案的開頭處，調整以下超參數：
-- `PDF_PATH`: 更換您想作為知識庫的 PDF 檔案路徑  
-- `EMBEDDING_MODEL`: 更換不同的 `sentence-transformers` 嵌入模型  
-- `LLM_MODEL`: 更換不同的 Google AI 模型 (例如 `gemini-2.5-pro`)  
-- `CHUNK_SIZE` / `CHUNK_OVERLAP`: 調整文件分塊的大小與重疊字數
-- `RETRIEVER_K`: 調整每次檢索時，要回傳給LLM的最相關文件區塊數量 
+本專案提供了一套標準化的流程來量化評估檢索器 (Retriever) 的性能。
+
+### 步驟 1: 建立黃金標準集
+
+1.  **產生 `chunks.json`**: 確保你已經執行過 `prepare_data.py`。
+2.  **建立 `golden_set.json`**: 這是一個手動標記的檔案，你需要根據 `chunks.json` 的內容，為你的評估問題集填寫正確的 `relevant_chunk_ids`。專案中已包含一個範本，你可以直接修改或參考其格式。
+
+### 步驟 2: 執行評估
+
+當 `golden_set.json` 標記完成後，執行 `evaluate.py` 腳本。
+
+```bash
+# 啟用虛擬環境後執行
+python evaluate.py
+```
+
+腳本會自動為 `golden_set.json` 中的每個來源文件建立專屬的 RAG 流程，並計算 `Recall@3` 和 `MRR` 分數，最後輸出匯總結果。
+
+## 未來優化方向
+
+目前的 RAG 系統是一個良好的基線，但有許多具有泛化能力的優化方向值得探索，以進一步提升系統性能：
+
+1.  **更換嵌入模型 (Embedding Model)**
+    - 目前使用的是輕量的 `all-MiniLM-L6-v2`。更換為更強大、更深層的模型（如 `all-mpnet-base-v2` 或其他 MTEB 排行榜上領先的模型）可能會顯著提升對語意細微差別的捕捉能力，從而提高檢索準確率。
+
+2.  **調整文本切割策略 (Chunking Strategy)**
+    - `CHUNK_SIZE` 和 `CHUNK_OVERLAP` 是影響檢索性能的關鍵超參數。可以透過實驗找到最適合文件特性的大小。較小的 chunk 更具主題性但可能損失上下文；較大的 chunk 則相反。
+    - 或者可以根據文件大小自適應，提交的Chunk或許也可以更靈活（考慮到有時候答案可能會在更大範圍的文件中）
+
+3.  **查詢擴展 (Query Expansion)**
+    - 在檢索前，可以利用 LLM 將使用者的原始問題改寫或擴展成多個語意相近的問題（例如，"小組人數" -> "how many students per group", "group size"）。使用多個問題進行搜索可以覆蓋更多樣的文本表述，提高召回率。
+
+4.  **重排序 (Re-ranking)**
+    - 在檢索器召回 top-k 個文件後（例如 k=20），可以再引入一個更精準但計算量更大的「重排序模型」（如 Cross-encoder）。這個模型會將問題與每個召回的 chunk 進行成對比較，並給出更精準的相關性分數，然後重新排序，將最相關的結果排到最前面。
+
+## 注意事項
+
+為了方便進行評估，本專案進行了特殊的架構設計：
+- `prepare_data.py` 會分割 `Dataset/` 目錄下的全部 PDF 檔案，並合併成一個大型的 `chunks.json`，其中的 `chunk_id` 是全域唯一的。
+- 在呼叫 `evaluate.py` 時，腳本會根據 `golden_set.json` 中標註的 `source_file`，從 `chunks.json` 篩選出對應來源的 chunk，並為其建立一個獨立的、隔離的向量資料庫 (`faiss_index_*`) 來進行評估。
+- `rag_baseline.py` 在單獨執行時，也是為單一文件建立獨立的 RAG 流程。若要更換目標文件，需修改其 `main` 區塊中的 `pdf_to_query_name` 變數。
