@@ -107,6 +107,41 @@ python evaluate.py
 
 腳本會自動為 `golden_set.json` 中的每個來源文件建立專屬的 RAG 流程，並計算 `Recall@3` 和 `MRR` 分數，最後輸出匯總結果。
 
+## 評估結果
+
+根據 `golden_set.json` 的標準答案，目前的 RAG 系統在基準設定下（`all-MiniLM-L6-v2` 嵌入模型）的檢索性能如下：
+
+- **Recall@3:** 0.8000
+- **MRR:** 0.5667
+
+### 詳細檢索結果  
+以下為執行`evaluate.py`腳本對每個問題進行Chunk檢索的詳細狀況：
+
+| 問題 (縮寫)                                  | 正確答案 (Chunk IDs) | 檢索結果 (Chunk IDs) | 是否命中 |
+| -------------------------------------------- | -------------------- | -------------------- | -------- |
+| **來源: 114-1 IR Final Project Requirements.pdf** |                      |                      |          |
+| What is the total number of students...      | `[0]`                | `[11, 1, 15]`        | False |
+| What is the exact submission deadline...     | `[15]`               | `[15, 1, 5]`         | True  |
+| List the main components that should be...   | `[3, 4, 5]`          | `[14, 1, 3]`         | True  |
+| What percentage of the total grade is...     | `[1]`                | `[1, 0, 11]`         | True  |
+| In the final project, is making a demo...    | `[5, 6]`             | `[15, 6, 5]`         | True  |
+| **來源: 2025 Generative Information Retrieval HW1.pdf** |                      |                      |          |
+| What is the deadline for HW1, and are...     | `[31, 41]`           | `[41, 38, 30]`       | True  |
+| For HW1, which two Sparse Retrieval...       | `[31]`               | `[39, 30, 31]`       | True  |
+| What is the final scoring metric for...      | `[35, 37]`           | `[40, 37, 41]`       | True  |
+| According to the HW1 report submission...    | `[39]`               | `[41, 30, 38]`       | False |
+| What is the penalty for failing to...        | `[38, 41]`           | `[41, 38, 30]`       | True  |  
+**Recall@3:** 0.8000  
+**MRR:** 0.5667          
+- **分析**:
+  - **優點**  
+   大多數問題都能成功召回至少一個相關的數據塊 (Recall@3 = 0.8)  
+   特別是對於日期、截止日期等關鍵字明確的問題，檢索效果很好  
+  - **待改進**
+   有兩個問題檢索失敗。  
+   例如問題"What is the total number of students..."，其答案在文件開頭，但系統召回了其他看似相關但無關的區塊  
+   這可能表示目前的嵌入模型對於某些語意細節的捕捉能力有限，或是文本切割策略可以再優化  
+
 ## 未來優化方向
 
 目前的 RAG 系統是一個良好的基線，但有許多具有泛化能力的優化方向值得探索，以進一步提升系統性能：
