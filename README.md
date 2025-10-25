@@ -164,6 +164,21 @@ python evaluate.py
   這可能導致其整體的語意向量被「稀釋」，在向量空間中反而不如那些主題更單一的錯誤區塊與問題來得接近。
 
 
+## 文獻回顧 (Literature Review)
+### 基於語義相似度的文本分塊 (Semantic Chunking)  
+在長文本問答任務中，模型通常需要先從文件中找出與問題最相關的內容區塊，再將這些區塊提供給大型語言模型（LLM）進行回答。
+傳統方法多採用固定長度切割（如`RecursiveCharacterTextSplitter`），依字元或段落長度將文件分塊。  
+然而，此方式無法感知語義邊界，容易造成語義相關內容被拆分，或將不相關內容合併於同一區塊，進而導致檢索精準度下降。
+Sheng 等人[1]提出的**Dynamic Chunking and Selection**方法針對此問題進行了改進。  
+他們首先根據句子間的語義相似度動態決定切割邊界（semantic chunking），接著利用問句導向（question-aware）的分類器判斷哪些區塊與問題最相關，僅保留最具相關性的部分供模型回答。  
+此策略有效降低了長文本任務中因固定切割造成的資訊稀釋問題。
+本研究與其方向相近，同樣著重於從文件中擷取最相關內容以提升回答品質；  
+然而，本研究聚焦於**優化chunk的切割方式與語義一致性**，以改善檢索階段的精準度與上下文的完整性。
+
+參考文獻
+[1] Y. Sheng, S. Liu, and R. Zhao, “Dynamic chunking and selection for reading comprehension of ultra-long context in large language models,” Proc. 63rd Annual Meeting of the Association for Computational Linguistics (ACL), 2025.
+
+
 ## 未來優化方向
 
 目前的 RAG 系統是一個良好的基線，但有許多具有泛化能力的優化方向值得探索，以進一步提升系統性能：
@@ -172,14 +187,14 @@ python evaluate.py
     - 目前使用的是輕量的 `all-MiniLM-L6-v2`。更換為更強大、更深層的模型（如 `all-mpnet-base-v2` 或其他 MTEB 排行榜上領先的模型）可能會顯著提升對語意細微差別的捕捉能力，從而提高檢索準確率。
 
 2.  **調整文本切割策略 (Chunking Strategy)**
-    - `CHUNK_SIZE` 和 `CHUNK_OVERLAP` 是影響檢索性能的關鍵超參數。可以透過實驗找到最適合文件特性的大小。較小的 chunk 更具主題性但可能損失上下文；較大的 chunk 則相反。
-    - 或者可以根據文件大小自適應，提交的Chunk或許也可以更靈活（考慮到有時候答案可能會在更大範圍的文件中）
+    - 嘗試改用語意進行Chunk切割，讓模型使用的Chunk與問題更加相關  
 
 3.  **查詢擴展 (Query Expansion)**
     - 在檢索前，可以利用 LLM 將使用者的原始問題改寫或擴展成多個語意相近的問題（例如，"小組人數" -> "how many students per group", "group size"）。使用多個問題進行搜索可以覆蓋更多樣的文本表述，提高召回率。
 
 4.  **重排序 (Re-ranking)**
     - 在檢索器召回 top-k 個文件後（例如 k=20），可以再引入一個更精準但計算量更大的「重排序模型」（如 Cross-encoder）。這個模型會將問題與每個召回的 chunk 進行成對比較，並給出更精準的相關性分數，然後重新排序，將最相關的結果排到最前面。
+
 
 ## 注意事項
 
