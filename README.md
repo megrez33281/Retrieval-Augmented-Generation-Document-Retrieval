@@ -85,7 +85,26 @@ python prepare_data.py
 python rag_baseline.py
 ```
 
-程式會為指定文件建立 RAG 流程，並進入互動模式。若要更換問答的目標文件，請直接修改 `rag_baseline.py` 中 `if __name__ == "__main__":` 區塊裡的 `pdf_to_query_name` 變數。
+
+## 資料集說明 (Dataset)
+本專案測試時使用的知識庫由兩份Generative Information Retrieval課程文件組成：
+  
+| 文件名稱 | 類型 | 主要內容 |
+|-----------|------|-----------|
+| **GIR HW1** | 作業說明 | 定義 Sparse / Dense retrieval、截止日期與評分方式 |
+| **GIR Project Requirements** | 專案說明 | 描述期末專案規範、分組與評分比例 |
+
+所有文件皆放置於 `Dataset/` 資料夾中，並透過 `prepare_data.py` 進行以下預處理：  
+- 使用 `PyMuPDF` 擷取文字並移除頁眉、頁碼與多餘換行  
+- 採用 `RecursiveCharacterTextSplitter` 以 `chunk_size=1000`、`overlap=200` 進行切割  
+- 使用 `sentence-transformers/all-MiniLM-L6-v2` 進行語意向量化並建立 FAISS 索引  
+- 輸出統一格式之 `chunks.json`，作為後續檢索與評估的單一資料來源  
+
+此資料集同時用於：  
+1. RAG 問答系統的互動式查詢與展示  
+2. 檢索效能量化評估（Recall@k、MRR）  
+3. 不同嵌入模型與重排序策略的後續實驗
+  
 
 ## 評估流程
 
@@ -164,19 +183,44 @@ python evaluate.py
   這可能導致其整體的語意向量被「稀釋」，在向量空間中反而不如那些主題更單一的錯誤區塊與問題來得接近。
 
 
-## 文獻回顧 (Literature Review)
-### 基於語義相似度的文本分塊 (Semantic Chunking)  
-在長文本問答任務中，模型通常需要先從文件中找出與問題最相關的內容區塊，再將這些區塊提供給大型語言模型（LLM）進行回答。
-傳統方法多採用固定長度切割（如`RecursiveCharacterTextSplitter`），依字元或段落長度將文件分塊。  
-然而，此方式無法感知語義邊界，容易造成語義相關內容被拆分，或將不相關內容合併於同一區塊，進而導致檢索精準度下降。
-Sheng 等人[1]提出的**Dynamic Chunking and Selection**方法針對此問題進行了改進。  
-他們首先根據句子間的語義相似度動態決定切割邊界（semantic chunking），接著利用問句導向（question-aware）的分類器判斷哪些區塊與問題最相關，僅保留最具相關性的部分供模型回答。  
-此策略有效降低了長文本任務中因固定切割造成的資訊稀釋問題。
-本研究與其方向相近，同樣著重於從文件中擷取最相關內容以提升回答品質；  
-然而，本研究聚焦於**優化chunk的切割方式與語義一致性**，以改善檢索階段的精準度與上下文的完整性。
+## 文獻回顧（Literature Review / Related Work）
 
-參考文獻
-[1] Y. Sheng, S. Liu, and R. Zhao, “Dynamic chunking and selection for reading comprehension of ultra-long context in large language models,” Proc. 63rd Annual Meeting of the Association for Computational Linguistics (ACL), 2025.
+長文本問答任務中，RAG 系統的關鍵在於「如何有效地從原始文件中檢索出與問題最相關的內容」  
+本研究的重點在於**檢索階段的語義精度提升**，因此回顧主要分為三個方向：**語義分塊（Semantic Chunking）**、**重排序（Re-ranking）** 與 **嵌入模型選型（Embedding Selection）**  
+
+---
+
+### 1. 語義分塊與動態切割 (Semantic/Dynamic Chunking)
+
+Sheng 等人 [1] 提出 **Dynamic Chunking and Selection** 方法，根據句子間的語義相似度動態決定切割邊界，
+並使用question-aware篩選器保留最相關區塊，有效避免了傳統固定長度切割造成的語義稀釋問題  
+本研究採用類似思路，嘗試改善chunk的語義一致性，預期能提升檢索階段的精確度與上下文完整性   
+
+---
+
+### 2. 檢索結果重排序 (Re-ranking with Cross-Encoders)
+
+Nogueira 與 Cho [2] 提出利用 **BERT Cross-Encoder** 進行 passage re-ranking，
+在初步召回後重新評估每個`(query, passage)`的語意匹配度  
+此方法能顯著提升top-1命中率與整體MRR，是現今許多RAG系統採用的標準做法  
+本研究未來計畫在FAISS檢索之後，導入cross-encoder re-ranking以提升高語義需求問題的精確性  
+
+---
+
+### 3. 嵌入模型選型與語義對齊 (Embedding Model Selection)
+
+Muennighoff 等人 [3] 的 **MTEB Benchmark** 系統性比較了多種sentence-transformer模型在檢索與語義任務上的表現，
+結果顯示`all-mpnet-base-v2`、`E5-large`等模型在語義檢索上普遍優於輕量模型`MiniLM-L6-v2`  
+本研究據此計畫評估不同embedding模型對Recall@k與MRR的影響，以尋找性能與效率的最佳平衡點  
+
+---
+
+### 參考文獻
+
+[1] Y. Sheng, S. Liu, & R. Zhao, “Dynamic chunking and selection for reading comprehension of ultra-long context in large language models,” *Proc. 63rd Annual Meeting of the ACL*, 2025.
+[2] R. Nogueira & K. Cho, “Passage re-ranking with BERT,” *arXiv preprint* arXiv:1901.04085, 2019.
+[3] N. Muennighoff et al., “MTEB: Massive Text Embedding Benchmark,” *NeurIPS Datasets and Benchmarks Track*, 2023.
+
 
 
 ## 未來優化方向

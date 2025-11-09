@@ -1,0 +1,3 @@
+What do retrieve： Text Chunk
+How to use retrieval： Context
+When to retrieve：Once
