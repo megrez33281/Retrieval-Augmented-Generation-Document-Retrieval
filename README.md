@@ -213,9 +213,9 @@ OR-ShARC 是一個專門用於評估「規則遵循問答」的資料集
 我們使用`dev`集作為驗證資料，對比了兩個常用的嵌入模型  
 
 #### 評估結果比較  
-Total Samples Evaluated: 1105
+Total Samples Evaluated: 1105  
 Total Chunks in Knowledge Base: 651
-     
+       
 | Model                                         | Recall@3 | MRR      |
 | --------------------------------------------- | -------- | -------- |
 | `sentence-transformers/all-MiniLM-L6-v2`      | 0.8244   | 0.7195   |
