@@ -79,17 +79,14 @@ def main():
     try:
         with open('golden_set.json', 'r', encoding='utf-8') as f:
             golden_set = json.load(f)
+        print(f"已載入 {len(golden_set)} 個問題樣本。")
     except FileNotFoundError:
         print("錯誤: golden_set.json 不存在。請先建立並完成標記。")
         return
     
     recall, mrr = evaluate_retriever(golden_set, EMBEDDING_MODEL)
 
-    print("\n--- 最終評估結果 ---")
-    print(f"模型: {EMBEDDING_MODEL}")
-    print(f"Recall@3: {recall:.4f}")
-    print(f"MRR:      {mrr:.4f}")
-    print("--------------------")
+
 
 if __name__ == "__main__":
     main()

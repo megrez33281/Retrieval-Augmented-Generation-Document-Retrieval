@@ -18,8 +18,11 @@ def main():
         with open('golden_set.json', 'r', encoding='utf-8') as f:
             golden_set = json.load(f)
         print(f"Loaded {len(golden_set)} questions from golden_set.json")
-    except FileNotFoundError:
-        print("Error: golden_set.json not found. Please make sure it has been created.")
+        with open('chunks.json', 'r', encoding='utf-8') as f:
+            chunks = json.load(f)
+        print(f"Loaded {len(chunks)} chunks from chunks.json")
+    except FileNotFoundError as e:
+        print(f"Error: {e.filename} not found. Please make sure it has been created.")
         return
 
     results = []
@@ -33,8 +36,10 @@ def main():
 
     # --- Print Final Comparison Table ---
     print("\n\n--- Final Model Comparison Results ---")
+    print(f"Total Samples Evaluated: {len(golden_set)}")
+    print(f"Total Chunks in Knowledge Base: {len(chunks)}")
     # Print header
-    print(f"{ 'Model':<45} | { 'Recall@3':<10} | { 'MRR':<10}")
+    print(f"{'Model':<45} | {'Recall@3':<10} | {'MRR':<10}")
     print("-" * 70)
     # Print results
     for res in results:
