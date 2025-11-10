@@ -18,7 +18,7 @@ if not os.environ.get("GOOGLE_API_KEY"):
 
 # --- 模型與嵌入設定 ---
 PDF_PATH = "要求/114-1 IR Final Project Requirements.pdf"   # 要讀取的檔案
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2" # 用來抽取特徵向量
+EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2" # 用來抽取特徵向量
 LLM_MODEL = "gemini-2.5-flash" # 最後串接的LLM模型
 
 
@@ -39,24 +39,25 @@ else:
     print(f"警告: {CHUNKS_FILE} 不存在。請先執行 prepare_data.py 來產生 chunk 資料。")
 
 
-def setup_rag_pipeline(source_file_name):
+def setup_rag_pipeline(source_file_name, embedding_model):
     """
-    為指定的來源檔案建立 RAG 流程。
-    它會從預先處理好的 chunks.json 中讀取資料，而不是重新切割 PDF。
+    為指定的來源檔案和嵌入模型建立 RAG 流程。
     """
     if ALL_CHUNKS is None:
         raise RuntimeError(f"{CHUNKS_FILE} 未載入，無法繼續")
 
-    # 根據來源檔案名稱動態產生向量儲存庫路徑
+    # 根據來源檔案和模型名稱動態產生向量儲存庫路徑
     file_name_base = os.path.splitext(source_file_name)[0]
-    vector_store_path = f"faiss_index_{file_name_base}"
+    # 將模型名稱中的斜線替換成底線，以建立有效的資料夾名稱
+    sanitized_model_name = embedding_model.replace('/', '_')
+    vector_store_path = f"faiss_index_{file_name_base}_{sanitized_model_name}"
 
     if os.path.exists(vector_store_path):
         print(f"載入已存在的向量儲存庫於: {vector_store_path}")
-        embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+        embeddings = HuggingFaceEmbeddings(model_name=embedding_model)
         vector_store = FAISS.load_local(vector_store_path, embeddings, allow_dangerous_deserialization=True)
     else:
-        print(f"為 {source_file_name} 建立新的向量儲存庫")
+        print(f"為 {source_file_name} 使用 {embedding_model} 建立新的向量儲存庫")
         
         # 1. 從 ALL_CHUNKS 中篩選出屬於此來源的 chunks
         print(f"從 {CHUNKS_FILE} 篩選來源為 '{source_file_name}' 的區塊")
@@ -73,8 +74,8 @@ def setup_rag_pipeline(source_file_name):
             source_documents.append(Document(page_content=chunk['content'], metadata=new_metadata))
 
         # 2. 建立嵌入向量
-        print(f"使用 {EMBEDDING_MODEL} 建立嵌入向量中")
-        embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+        print(f"使用 {embedding_model} 建立嵌入向量中")
+        embeddings = HuggingFaceEmbeddings(model_name=embedding_model)
         
         # 3. 建立並儲存向量儲存庫
         print("建立並儲存向量儲存庫 (FAISS)")
@@ -136,7 +137,7 @@ if __name__ == "__main__":
     pdf_to_query_name = "114-1 IR Final Project Requirements.pdf"
     print(f"--- 正在為 {pdf_to_query_name} 建立互動式問答環境 ---")
 
-    pipeline_components = setup_rag_pipeline(pdf_to_query_name)
+    pipeline_components = setup_rag_pipeline(pdf_to_query_name, EMBEDDING_MODEL)
     rag_pipeline = pipeline_components["qa_chain"]
     
     # 範例問題

@@ -85,6 +85,22 @@ python prepare_data.py
 python rag_baseline.py
 ```
 
+## 腳本檔案說明
+
+- **`prepare_data.py`**
+  - **用途**: 預處理腳本。讀取 `Dataset/` 資料夾中的所有 PDF 檔案，將其內容切割成較小的文本區塊 (chunks)，並儲存為 `chunks.json`。這是使用問答功能的**第一步**  
+  
+- **`rag_baseline.py`**
+  - **用途**: 核心 RAG 流程與互動式問答介面。此腳本包含建立檢索器 (Retriever) 和生成鏈 (Generation Chain) 的主要邏輯 (`setup_rag_pipeline`)。直接執行此腳本，可以針對單一PDF文件進行互動式問答  
+
+- **`evaluate.py`**
+  - **用途**: 檢索器性能評估腳本。根據`golden_set.json`中的標準答案，計算指定嵌入模型在`Recall@3`和`MRR`指標上的分數  
+
+- **`convert_or_sharc.py`**
+  - **用途**: 資料集轉換工具。用於將OR-ShARC資料集（一個用於評估規則匹配能力的標準資料集）轉換為本系統相容的`chunks.json`和`golden_set.json`格式。  
+
+- **`compare_models.py`**
+  - **用途**: 自動化模型比較腳本。可以一次評估`MODELS_TO_COMPARE`列表中定義的多個嵌入模型，並在最後輸出所有模型的性能比較表，方便進行分析  
 
 ## 資料集說明 (Dataset)
 本專案測試時使用的知識庫由兩份Generative Information Retrieval課程文件組成：
@@ -181,6 +197,53 @@ python evaluate.py
 2.  **Chunk 語意被稀釋**: 
   正確答案所在的`Chunk 0` 內容較為混雜，除了人數資訊外，還包含了專案主題介紹。  
   這可能導致其整體的語意向量被「稀釋」，在向量空間中反而不如那些主題更單一的錯誤區塊與問題來得接近。
+
+
+## 進階評估：模型比較
+
+為了更深入地評估檢索器的核心性能，本專案引入了OR-ShARC資料集，並建立了一套自動化比較不同嵌入模型的流程   
+
+### 1. OR-ShARC 資料集評估
+  
+OR-ShARC 是一個專門用於評估「規則遵循問答」的資料集  
+它的特點是問題通常需要精準匹配到知識庫中的特定規則條文才能正確回答  
+這使它成為測試嵌入模型對長篇、結構化文本語義理解能力的絕佳基準
+不過鑒於其中的資料屬於"已經被切割過的"，此處只用此資料集評估在已經切好Chunk的前提下，是否能準確匹配相應的區塊的能力  
+
+我們使用`dev`集作為驗證資料，對比了兩個常用的嵌入模型  
+
+#### 評估結果比較
+
+| Model                                         | Recall@3 | MRR      |
+| --------------------------------------------- | -------- | -------- |
+| `sentence-transformers/all-MiniLM-L6-v2`      | 0.8244   | 0.7195   |
+| `sentence-transformers/all-mpnet-base-v2`     | 0.8326   | 0.7311   |
+
+**結果分析**:
+- **`all-mpnet-base-v2` 表現更優**：無論是 `Recall@3` 還是 `MRR`，`all-mpnet-base-v2` 的分數都更高，證明它在理解規則文本的細微語義差異上，比輕量的 `all-MiniLM-L6-v2` 更具優勢  
+- **驗證了系統有效性**：兩個模型都取得了不錯的成績（Recall@3 > 0.82），證明目前的 RAG 架構在處理特定領域的檢索任務時是有效且可靠的  
+
+### 2. 自動化模型比較流程
+
+為了方便進行模型比較，專案新增了以下腳本與功能：
+  
+- **`convert_or_sharc.py`**: 用於將原始的 OR-ShARC 資料集轉換為本系統相容的`chunks.json`和`golden_set.json`格式  
+- **`compare_models.py`**: 自動化評估腳本。你可以在此腳本的`MODELS_TO_COMPARE`列表中加入多個`sentence-transformers`模型名稱，它會自動為每個模型執行完整的評估流程，並在最後生成清晰的比較表格  
+
+#### 使用方法
+1. **準備資料** (僅需執行一次)
+   - 將 OR-ShARC 資料集解壓縮至 `Dataset_OR-ShARC` 資料夾。
+   - 執行轉換腳本：
+     ```bash
+     python convert_or_sharc.py
+     ```
+
+2. **執行比較**
+   - （可選）在 `compare_models.py` 中編輯 `MODELS_TO_COMPARE` 列表。
+   - 執行比較腳本：
+     ```bash
+     python compare_models.py
+     ```
 
 
 ## 文獻回顧（Literature Review / Related Work）

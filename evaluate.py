@@ -1,11 +1,11 @@
 
 import os
 import json
-from rag_baseline import setup_rag_pipeline
+from rag_baseline import setup_rag_pipeline, EMBEDDING_MODEL
 
-def evaluate_retriever(golden_set):
+def evaluate_retriever(golden_set, embedding_model):
     """
-    使用黃金標準集來評估檢索器的 Recall@3 和 MRR。
+    使用黃金標準集和指定的嵌入模型來評估檢索器的 Recall@3 和 MRR。
     """
     recall_scores = []
     mrr_scores = []
@@ -27,13 +27,17 @@ def evaluate_retriever(golden_set):
         print("錯誤: 沒有可供評估的問題。請檢查 golden_set.json 是否已正確標記。")
         return 0.0, 0.0
 
+    print(f"\n--- 使用模型: {embedding_model} ---")
     print(f"開始評估 {len(golden_set)} 個問題，來源分為 {len(questions_by_source)} 個檔案...")
 
     # 為每個來源檔案建立一次 RAG pipeline
     for source_filename, questions in questions_by_source.items():
         print(f"\n--- 正在處理來源: {source_filename} ---")
-        # 為這個來源檔案建立專屬的 retriever
-        pipeline_components = setup_rag_pipeline(source_file_name=source_filename)
+        # 為這個來源檔案和模型建立專屬的 retriever
+        pipeline_components = setup_rag_pipeline(
+            source_file_name=source_filename,
+            embedding_model=embedding_model
+        )
         retriever = pipeline_components["retriever"]
 
         # 在這個 retriever 上評估所有相關問題
@@ -56,10 +60,11 @@ def evaluate_retriever(golden_set):
                     break
             mrr_scores.append(reciprocal_rank)
             
-            print(f"  Q: {question[:40]}...")
-            print(f"     - Ground Truth IDs: {sorted(list(relevant_ids))}")
-            print(f"     - Retrieved IDs:    {retrieved_ids}")
-            print(f"     - Hit: {is_hit}, RR: {reciprocal_rank:.2f}")
+            # 減少輸出，只在出錯時顯示詳細資訊
+            # print(f"  Q: {question[:40]}...")
+            # print(f"     - Ground Truth IDs: {sorted(list(relevant_ids))}")
+            # print(f"     - Retrieved IDs:    {retrieved_ids}")
+            # print(f"     - Hit: {is_hit}, RR: {reciprocal_rank:.2f}")
 
     # 計算最終平均分數
     final_recall = sum(recall_scores) / len(recall_scores) if recall_scores else 0.0
@@ -78,9 +83,10 @@ def main():
         print("錯誤: golden_set.json 不存在。請先建立並完成標記。")
         return
     
-    recall, mrr = evaluate_retriever(golden_set)
+    recall, mrr = evaluate_retriever(golden_set, EMBEDDING_MODEL)
 
     print("\n--- 最終評估結果 ---")
+    print(f"模型: {EMBEDDING_MODEL}")
     print(f"Recall@3: {recall:.4f}")
     print(f"MRR:      {mrr:.4f}")
     print("--------------------")
