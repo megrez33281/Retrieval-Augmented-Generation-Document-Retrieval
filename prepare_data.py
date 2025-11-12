@@ -2,17 +2,19 @@
 import os
 import json
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_huggingface import HuggingFaceEmbeddings
 
 # --- 組態設定 ---
 DATASET_DIR = "Dataset"
-CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 200
 OUTPUT_FILE = "chunks.json"
+# 注意：SemanticChunker 不需要 chunk_size 和 overlap
+# 它使用嵌入模型來決定切割點
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 def create_chunks_file():
     """
-    讀取資料夾中的所有PDF，將它們切割成帶有ID的區塊，並儲存為JSON檔案。
+    讀取資料夾中的所有PDF，將它們以語意方式切割成帶有ID的區塊，並儲存為JSON檔案。
     """
     pdf_files = [f for f in os.listdir(DATASET_DIR) if f.endswith('.pdf')]
     if not pdf_files:
@@ -24,11 +26,19 @@ def create_chunks_file():
     for pdf_file in pdf_files:
         pdf_path = os.path.join(DATASET_DIR, pdf_file)
         print(f" - 正在載入: {pdf_path}")
-        loader = PyPDFLoader(pdf_path)
-        all_docs.extend(loader.load())
+        try:
+            loader = PyPDFLoader(pdf_path)
+            all_docs.extend(loader.load())
+        except Exception as e:
+            print(f"讀取 {pdf_path} 失敗: {e}")
+
+    if not all_docs:
+        print("未能成功載入任何文件。")
+        return
     
-    print("\n切割文件...")
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
+    print("\n使用語意切割器 (Semantic Chunker) 切割文件...")
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+    text_splitter = SemanticChunker(embeddings)
     texts = text_splitter.split_documents(all_docs)
     
     # 為每個區塊加上唯一的 ID
@@ -47,7 +57,7 @@ def create_chunks_file():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(chunks_with_ids, f, ensure_ascii=False, indent=4)
         
-    print(f"\n成功產生 {len(chunks_with_ids)} 個區塊，已儲存至 {OUTPUT_FILE}")
+    print(f"\n成功產生 {len(chunks_with_ids)} 個語意區塊，已儲存至 {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     create_chunks_file()

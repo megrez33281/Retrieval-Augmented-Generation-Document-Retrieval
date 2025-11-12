@@ -1,0 +1,498 @@
+[
+    {
+        "question": "How many distinct methods are explicitly defined or listed in the provided documents, and what are their descriptions?",
+        "answer": "根據提供的知識，只有一個明確定義或列出的方法：\n\n一個方法：\n*   **Method 3**: Any reasonable way you can think",
+        "sources": [
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 7
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 13
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 63
+            },
+            {
+                "source": "IRIE114-06_Retrieval_augmented_LMs(final).pdf",
+                "page": 26
+            },
+            {
+                "source": "IRIE114-02_Related_Topics.pdf",
+                "page": 10
+            }
+        ]
+    },
+    {
+        "question": "How many methods are described or referenced in the 2025 Information Retrieval HW2.pdf document?",
+        "answer": "在2025 Information Retrieval HW2.pdf文件中，提到了2種用於對齊照片和查詢的方法：使用預訓練模型（pretrained model）或訓練自己的模型（train your own）。此外，文件也提及了預處理（pre-processing）和使用「任何方法」（any method）來編碼圖像和文本以比較相似性，但沒有具體描述這些方法的數量或類型。",
+        "sources": [
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 13
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 1
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 11
+            },
+            {
+                "source": "IRIE114-06_Retrieval_augmented_LMs(final).pdf",
+                "page": 26
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 46
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 31
+            }
+        ]
+    },
+    {
+        "question": "What is the total number of methods described or listed in the provided documents?",
+        "answer": "根據提供的知識，只有一個方法被明確描述或列出。\n\n答案: 1\n補充說明: 在「主要知識」中，僅提及了「Method 3 - Any reasonable way you can think」。沒有其他方法被描述或列出。",
+        "sources": [
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 7
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 13
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 12
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 0
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 63
+            },
+            {
+                "source": "IRIE114-06_Retrieval_augmented_LMs(final).pdf",
+                "page": 26
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 15
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 65
+            }
+        ]
+    },
+    {
+        "question": "How Could I do this project?",
+        "answer": "要完成這個專案，你需要測量照片與查詢的相關性。這需要你使用任何方法將圖像（或圖像和文字）編碼到同一個空間中，以比較圖像和查詢之間的相似性。專案要求將你的提交上傳到 Kaggle，並將報告和原始碼提交到 E3。在專案過程中，你需要討論如何提升模型效能（例如，透過添加模組或嘗試不同的模型並觀察效能變化），目標是超越提供的簡單與強大基準線。\n\n補充來說，這個專案（屬於作業）必須獨立完成，並且會為此作業舉辦一個 Kaggle 競賽。",
+        "sources": [
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 1
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 8
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 10
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 5
+            }
+        ]
+    },
+    {
+        "question": "Can I use pretrained model",
+        "answer": "是的，可以使用預訓練模型。\n\n根據主要知識，在將圖片和查詢對齊到相同的嵌入空間時，明確提供了「使用預訓練模型或自行訓練」作為一個選項。補充知識進一步說明了「預訓練+微調（pretrain + finetune）」是一種利用預訓練模型的常見範式。",
+        "sources": [
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 2
+            },
+            {
+                "source": "2025 Information Retrieval HW2.pdf",
+                "page": 11
+            },
+            {
+                "source": "IRIE114-06_Retrieval_augmented_LMs(final).pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-08_RAG Training (v3).pdf",
+                "page": 14
+            },
+            {
+                "source": "IRIE114-08_RAG Training (v3).pdf",
+                "page": 23
+            }
+        ]
+    },
+    {
+        "question": "What is the total number of students allowed in a single group for the final project?",
+        "answer": "The final project allows groups of 3 to 4 students.",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 2
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 5
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            }
+        ]
+    },
+    {
+        "question": "What is the exact submission deadline for the final project report, including the date and time?",
+        "answer": "Final project report submission deadline is 12/15 (Mon.) 23:59.",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-09_From_Neural_IR_to_Generative_IR (v2).pdf",
+                "page": 29
+            }
+        ]
+    },
+    {
+        "question": "List the main components that should be covered in the Mid-term Project Results Presentation.",
+        "answer": "Mid-term Project Results Presentation 應涵蓋以下主要內容：\n*   Introduction - 簡要概述你的問題。\n*   你已調查的相關工作 (related work you have surveyed)。\n*   你已實施的方法 (methods you have implemented)。\n*   你的初步結果 (preliminary results)。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            }
+        ]
+    },
+    {
+        "question": "What percentage of the total grade is the Final Project Report worth?",
+        "answer": "Final Project Report 佔總成績的 15%。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 2
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 5
+            }
+        ]
+    },
+    {
+        "question": "In the final project, is making a demo for the work optional or mandatory?",
+        "answer": "In the final project, making a demo for your work is **optional**.",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 34
+            }
+        ]
+    },
+    {
+        "question": "What is the deadline for HW1, and are late submissions accepted?",
+        "answer": "HW1 的截止日期是 11/11(Tue.) 23:59，不接受遲交。",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 8
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 15
+            }
+        ]
+    },
+    {
+        "question": "For HW1, which two Sparse Retrieval methods must be implemented by the student from scratch?",
+        "answer": "根據提供的知識，學生必須從頭實作的兩種稀疏檢索方法是 **TF-IDF** 和 **BM25**。",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 9
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 2
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 5
+            }
+        ]
+    },
+    {
+        "question": "What is the final scoring metric for the HW1 Kaggle submission, as mentioned in the \\\"Requirements & Scoring Metrics\\\" section?",
+        "answer": "The final scoring metric for the HW1 Kaggle submission is Recall@10. This means that if the ground-truth code ID appears in the top-10 retrieved results, it will be counted as 1; otherwise, it will be counted as 0. The final score is the average across all queries.",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 10
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 7
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 5
+            },
+            {
+                "source": "IRIE114-09_From_Neural_IR_to_Generative_IR (v2).pdf",
+                "page": 35
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 50
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            }
+        ]
+    },
+    {
+        "question": "What are the specific content requirements or guidelines for the HW1 report?",
+        "answer": "[QUERY_REWRITE] Where can I find the detailed content requirements and evaluation criteria for the HW1 report?",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 50
+            }
+        ]
+    },
+    {
+        "question": "What are the content requirements for the HW1 report?",
+        "answer": "[QUERY_REWRITE] What specific content or sections are required for the HW1 report?",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-06_Retrieval_augmented_LMs(final).pdf",
+                "page": 26
+            },
+            {
+                "source": "IRIE114-07_RAG Architecture.pdf",
+                "page": 50
+            }
+        ]
+    },
+    {
+        "question": "What is the penalty for failing to comply with the submission rules for HW1?",
+        "answer": "根據主要知識，如果未能遵守作業1的提交規則，將會被扣5分。",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 11
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 8
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-09_From_Neural_IR_to_Generative_IR (v2).pdf",
+                "page": 35
+            },
+            {
+                "source": "traditional_text_preprocessing.pdf",
+                "page": 63
+            }
+        ]
+    }
+]

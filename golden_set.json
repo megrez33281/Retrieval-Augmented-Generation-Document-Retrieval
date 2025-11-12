@@ -9,54 +9,54 @@
         "question": "What is the exact submission deadline for the final project report, including the date and time?",
         "answer": "12/15 (Mon.) 23:59.",
         "source_file": "114-1 IR Final Project Requirements.pdf",
-        "relevant_chunk_ids": [15]
+        "relevant_chunk_ids": [9]
     },
     {
         "question": "List the main components that should be covered in the Mid-term Project Results Presentation.",
         "answer": "Introduction, Literature Review / Related work, Dataset, Main Approach, Evaluation Methods, Preliminary Results.",
         "source_file": "114-1 IR Final Project Requirements.pdf",
-        "relevant_chunk_ids": [3, 4, 5]
+        "relevant_chunk_ids": [2, 3]
     },
     {
         "question": "What percentage of the total grade is the Final Project Report worth?",
         "answer": "15%.",
         "source_file": "114-1 IR Final Project Requirements.pdf",
-        "relevant_chunk_ids": [1]
+        "relevant_chunk_ids": [0]
     },
     {
         "question": "What is the deadline for HW1, and are late submissions accepted?",
         "answer": "The deadline is 11/11 (Tue.) 23:59, and no late submissions will be accepted.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
-        "relevant_chunk_ids": [31, 41]
+        "relevant_chunk_ids": [19, 34]
     },
     {
         "question": "For HW1, which two Sparse Retrieval methods must be implemented by the student from scratch?",
         "answer": "TF-IDF and BM25.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
-        "relevant_chunk_ids": [31]
+        "relevant_chunk_ids": [24, 19]
     },
     {
         "question": "What is the final scoring metric for the HW1 Kaggle submission, as mentioned in the \"Requirements & Scoring Metrics\" section?",
         "answer": "Recall@10.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
-        "relevant_chunk_ids": [35, 37]
+        "relevant_chunk_ids": [25]
     },
     {
         "question": "According to the HW1 report submission guidelines, what is the first question that needs to be answered in the report?",
         "answer": "In Sparse Retrieval methods, compare the retrieval performance of TF-IDF and BM25...",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
-        "relevant_chunk_ids": [39]
+        "relevant_chunk_ids": [31]
     },
     {
         "question": "In the final project, is making a demo for the work optional or mandatory?",
         "answer": "It is optional.",
         "source_file": "114-1 IR Final Project Requirements.pdf",
-        "relevant_chunk_ids": [5, 6]
+        "relevant_chunk_ids": [4]
     },
     {
         "question": "What is the penalty for failing to comply with the submission rules for HW1?",
         "answer": "A deduction of 5 points.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
-        "relevant_chunk_ids": [38, 41]
+        "relevant_chunk_ids": [34]
     }
 ]

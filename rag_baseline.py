@@ -8,6 +8,8 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # --- 組態設定 ---
 # 讀取GOOGLE_API_KEY環境變數
@@ -17,15 +19,14 @@ if not os.environ.get("GOOGLE_API_KEY"):
 
 
 # --- 模型與嵌入設定 ---
-PDF_PATH = "要求/114-1 IR Final Project Requirements.pdf"   # 要讀取的檔案
-EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2" # 用來抽取特徵向量
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2" # 用來抽取特徵向量
 LLM_MODEL = "gemini-2.5-flash" # 最後串接的LLM模型
 
 
 # --- 文件分塊與向量儲存設定 ---
 CHUNK_SIZE = 1000   # 每個chunk多少字
 CHUNK_OVERLAP = 200 # 不同chunk間會有多少自重疊
-VECTOR_STORE_PATH = "faiss_index"   # 向量儲存的地方
+KNOWLEDGE_DIR = "Knowledge" # 補充知識庫的資料夾
 RETRIEVER_K = 3     # 檢索時要回傳的區塊數量
 
 
@@ -39,115 +40,268 @@ else:
     print(f"警告: {CHUNKS_FILE} 不存在。請先執行 prepare_data.py 來產生 chunk 資料。")
 
 
-def setup_rag_pipeline(source_file_name, embedding_model):
+def setup_primary_retriever(source_file_name, embedding_model_name, embeddings):
     """
-    為指定的來源檔案和嵌入模型建立 RAG 流程。
+    為指定的主要來源檔案建立 RAG 流程中的檢索器。
     """
     if ALL_CHUNKS is None:
         raise RuntimeError(f"{CHUNKS_FILE} 未載入，無法繼續")
 
     # 根據來源檔案和模型名稱動態產生向量儲存庫路徑
     file_name_base = os.path.splitext(source_file_name)[0]
-    # 將模型名稱中的斜線替換成底線，以建立有效的資料夾名稱
-    sanitized_model_name = embedding_model.replace('/', '_')
+    sanitized_model_name = embedding_model_name.replace('/', '_')
     vector_store_path = f"faiss_index_{file_name_base}_{sanitized_model_name}"
 
     if os.path.exists(vector_store_path):
-        print(f"載入已存在的向量儲存庫於: {vector_store_path}")
-        embeddings = HuggingFaceEmbeddings(model_name=embedding_model)
+        print(f"載入已存在的主要知識庫於: {vector_store_path}")
         vector_store = FAISS.load_local(vector_store_path, embeddings, allow_dangerous_deserialization=True)
     else:
-        print(f"為 {source_file_name} 使用 {embedding_model} 建立新的向量儲存庫")
+        print(f"為 {source_file_name} 使用 {embedding_model_name} 建立新的主要知識庫")
         
-        # 1. 從 ALL_CHUNKS 中篩選出屬於此來源的 chunks
-        print(f"從 {CHUNKS_FILE} 篩選來源為 '{source_file_name}' 的區塊")
-        source_chunks_json = [chunk for chunk in ALL_CHUNKS if chunk['metadata']['source'] == source_file_name]
-        
+        source_chunks_json = [c for c in ALL_CHUNKS if c['metadata']['source'] == source_file_name]
         if not source_chunks_json:
             raise ValueError(f"在 {CHUNKS_FILE} 中找不到任何來源為 '{source_file_name}' 的區塊")
 
-        # 將 JSON 物件轉換回 LangChain 的 Document 物件，並確保 chunk_id 被包含在 metadata 中
-        source_documents = []
-        for chunk in source_chunks_json:
-            new_metadata = chunk['metadata'].copy()
-            new_metadata['chunk_id'] = chunk['chunk_id']
-            source_documents.append(Document(page_content=chunk['content'], metadata=new_metadata))
+        source_documents = [
+            Document(page_content=c['content'], metadata={**c['metadata'], 'chunk_id': c['chunk_id']})
+            for c in source_chunks_json
+        ]
 
-        # 2. 建立嵌入向量
-        print(f"使用 {embedding_model} 建立嵌入向量中")
-        embeddings = HuggingFaceEmbeddings(model_name=embedding_model)
-        
-        # 3. 建立並儲存向量儲存庫
-        print("建立並儲存向量儲存庫 (FAISS)")
+        print(f"正在為主要知識庫建立嵌入向量...")
         vector_store = FAISS.from_documents(source_documents, embeddings)
         vector_store.save_local(vector_store_path)
-        print(f"向量儲存庫已存於: {vector_store_path}")
+        print(f"主要知識庫已存於: {vector_store_path}")
 
-    # 4. 建立問答鏈
-    # 根據儲存的Chunk的Embedding建立Retriever
-    retriever = vector_store.as_retriever(search_kwargs={'k': RETRIEVER_K})
-
-    # 初始化LLM
-    llm = ChatGoogleGenerativeAI(model=LLM_MODEL)
-
-    # 建立提示模板
-    template = '''僅根據以下內容來回答問題:{context}\n問題: {input}'''
-    # 建立聊天模板
-    prompt = ChatPromptTemplate.from_template(template)
-
-    # 建立合併文件的鏈，檢索的時候，負責將檢索到的內容合併成一個大的文字塊，將該文字塊以及問題填入template後，向LLM提問、接收回答
-    combine_docs_chain = create_stuff_documents_chain(llm, prompt)
-
-    # 建立最終的檢索鏈，這條鏈可以根據使用者輸入的問題在retriver中檢索相關的chunk，然後將檢索到的Chunk丟給combine_docs_chain進行提問
-    qa_chain = create_retrieval_chain(retriever, combine_docs_chain)
-    
-    print(f"--- 為 {source_file_name} 的 RAG 流程設定完成 ---")
-    return {"qa_chain": qa_chain, "retriever": retriever}
+    return vector_store.as_retriever(search_kwargs={'k': RETRIEVER_K})
 
 
-def ask_question(qa_chain, query):
+from langchain_experimental.text_splitter import SemanticChunker
+
+
+def setup_knowledge_retriever(knowledge_dir, embedding_model_name, embeddings):
     """
-    使用問答鏈來提問並印出答案。
+    為補充知識庫資料夾中的所有 PDF 建立一個記憶體內的檢索器。
+    """
+    print("\n--- 正在設定補充知識庫 ---")
+    pdf_files = [os.path.join(knowledge_dir, f) for f in os.listdir(knowledge_dir) if f.endswith('.pdf')]
+    
+    if not pdf_files:
+        print("在 Knowledge 資料夾中找不到任何 PDF 檔案，將跳過補充知識庫。")
+        return None
+
+    all_docs = []
+    print("載入補充知識 PDF 檔案中...")
+    for pdf_path in pdf_files:
+        try:
+            print(f" - 正在載入: {pdf_path}")
+            loader = PyPDFLoader(pdf_path)
+            all_docs.extend(loader.load())
+        except Exception as e:
+            print(f"讀取 {pdf_path} 失敗: {e}")
+    
+    if not all_docs:
+        print("無法載入任何補充文件內容。")
+        return None
+
+    print("使用語意切割器 (Semantic Chunker) 切割補充知識文件...")
+    text_splitter = SemanticChunker(embeddings)
+    texts = text_splitter.split_documents(all_docs)
+    
+    print(f"正在為 {len(texts)} 個補充區塊建立記憶體內向量儲存庫 (FAISS)...")
+    knowledge_vector_store = FAISS.from_documents(texts, embeddings)
+    print("補充知識庫設定完成。")
+    
+    return knowledge_vector_store.as_retriever(search_kwargs={'k': RETRIEVER_K})
+
+
+# --- 提示工程 ---
+ADVANCED_PROMPT_TEMPLATE = """
+請根據以下提供的兩種知識來回答問題。
+
+你的任務是：
+1.  首先，根據「主要知識」找出最直接、最核心的答案。
+2.  接著，檢視「補充知識」。如果它提供了與問題高度相關的額外細節、定義或背景，請用它來豐富你的答案，讓回答更完整。
+3.  如果「補充知識」與問題無關，或只是重複相同的資訊，則完全忽略它。
+4.  你的回答應簡潔且準確，先給出直接答案，再進行必要的補充。
+5.  **重要提示：如果你認為根據提供的知識無法充分回答問題，請不要嘗試編造答案。請輸出以下特殊標記，並在標記後提供一個你認為可以幫助檢索到更好資訊的「優化後的問題」。優化後的問題請使用英文。**
+    **格式範例：[QUERY_REWRITE] Optimized English Question**
+
+[主要知識]:
+{primary_context}
+
+[補充知識]:
+{supplemental_context}
+
+問題: {input}
+答案:
+"""
+
+# --- 查詢重寫設定 ---
+QUERY_REWRITE_TAG = "[QUERY_REWRITE]"
+MAX_RETRIES = 2 # 最多重試一次
+
+# --- QA 日誌設定 ---
+QA_LOG_FILE = "qa_log.json"
+
+def load_qa_log():
+    """載入 QA 日誌檔案。"""
+    if os.path.exists(QA_LOG_FILE):
+        try:
+            with open(QA_LOG_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            print(f"警告: {QA_LOG_FILE} 檔案損壞或格式不正確，將重新建立。")
+            return []
+    return []
+
+def save_qa_log(log_data):
+    """儲存 QA 日誌檔案。"""
+    with open(QA_LOG_FILE, 'w', encoding='utf-8') as f:
+        json.dump(log_data, f, ensure_ascii=False, indent=4)
+
+def collect_sources_info(docs):
+    """從 LangChain Document 物件中收集來源資訊。"""
+    sources_info = []
+    for doc in docs:
+        sources_info.append({
+            "source": os.path.basename(doc.metadata.get('source', 'N/A')),
+            "page": doc.metadata.get('page', 'N/A')
+        })
+    return sources_info
+
+def ask_question(query, primary_retriever, knowledge_retriever, llm, qa_log, retry_count=0):
+    """
+    使用主要和補充檢索器來提問，並使用進階提示模板生成答案。
+    如果 LLM 建議重寫問題，則會進行重試。
     """
     print(f"\n問題: {query}")
 
     try:
-        # 利用qa_chain完成相關chunk的檢索以及向LLM提問、接收答案的流程
-        response = qa_chain.invoke({"input": query})
-        print(f"\n答案: {response['answer']}")
-        print("\n--- 參考來源 ---")
-        for source in response["context"]:
-            # 清理來源內容中的換行符，使其更易於閱讀
-            cleaned_content = source.page_content.replace('\n', ' ').strip()
-            source_content = cleaned_content[:200] + "..."
-            print(f"頁碼: {source.metadata.get('page', 'N/A')}, 內容: \"{source_content}\"")
+        # 1. 分別從兩個知識庫檢索
+        print("正在從主要知識庫檢索...")
+        primary_docs = primary_retriever.invoke(query)
+        
+        knowledge_docs = []
+        if knowledge_retriever:
+            print("正在從補充知識庫檢索...")
+            knowledge_docs = knowledge_retriever.invoke(query)
+        
+        # 2. 格式化文件內容以用於提示
+        primary_context_str = "\n\n".join([f"來源: {os.path.basename(doc.metadata.get('source', 'N/A'))}, 頁碼: {doc.metadata.get('page', 'N/A')}\n內容: {doc.page_content}" for doc in primary_docs])
+        supplemental_context_str = "\n\n".join([f"來源: {os.path.basename(doc.metadata.get('source', 'N/A'))}, 頁碼: {doc.metadata.get('page', 'N/A')}\n內容: {doc.page_content}" for doc in knowledge_docs])
+
+        if not primary_context_str and not supplemental_context_str:
+            final_answer = "抱歉，在所有知識庫中都找不到相關資訊。"
+            print(f"\n答案: {final_answer}")
+            # 記錄這次的問答
+            qa_log.append({
+                "question": query,
+                "answer": final_answer,
+                "sources": []
+            })
+            save_qa_log(qa_log)
+            return
+
+        # 3. 建立並執行鏈
+        prompt = ChatPromptTemplate.from_template(ADVANCED_PROMPT_TEMPLATE)
+        chain = prompt | llm
+        
+        print("已組合上下文，正在使用進階提示生成答案...")
+        response = chain.invoke({
+            "primary_context": primary_context_str if primary_docs else "無",
+            "supplemental_context": supplemental_context_str if knowledge_docs else "無",
+            "input": query
+        })
+        
+        # AIMessage 物件的回應在 content 屬性中
+        answer = response.content
+        
+        # 檢查是否需要重寫問題
+        if QUERY_REWRITE_TAG in answer and retry_count < MAX_RETRIES:
+            print(f"\n偵測到查詢重寫請求 ({QUERY_REWRITE_TAG})。")
+            rewritten_query = answer.split(QUERY_REWRITE_TAG, 1)[1].strip()
+            print(f"優化後的問題: {rewritten_query}")
+            print(f"正在使用優化後的問題重新檢索 (重試次數: {retry_count + 1}/{MAX_RETRIES})...")
+            # 遞迴呼叫 ask_question 進行重試
+            ask_question(rewritten_query, primary_retriever, knowledge_retriever, llm, qa_log, retry_count + 1)
+        elif QUERY_REWRITE_TAG in answer and retry_count >= MAX_RETRIES:
+            print(f"\n已達到最大重試次數 ({MAX_RETRIES})。將顯示原始 LLM 回應。")
+            print(f"\n答案: {answer}")
+            # 記錄這次的問答
+            all_sources_for_log = collect_sources_info(primary_docs + knowledge_docs)
+            qa_log.append({
+                "question": query,
+                "answer": answer,
+                "sources": all_sources_for_log
+            })
+            save_qa_log(qa_log)
+        else:
+            print(f"\n答案: {answer}")
+            
+            # 顯示參考來源
+            print("\n--- 參考來源 ---")
+            all_sources_for_log = []
+            if primary_docs:
+                print("  --- 主要知識來源 ---")
+                for doc in primary_docs:
+                    source_info = {"source": os.path.basename(doc.metadata.get('source', 'N/A')), "page": doc.metadata.get('page', 'N/A')}
+                    print(f"    - {source_info['source']} (頁碼: {source_info['page']})")
+                    all_sources_for_log.append(source_info)
+            if knowledge_docs:
+                print("  --- 補充知識來源 ---")
+                for doc in knowledge_docs:
+                    source_info = {"source": os.path.basename(doc.metadata.get('source', 'N/A')), "page": doc.metadata.get('page', 'N/A')}
+                    print(f"    - {source_info['source']} (頁碼: {source_info['page']})")
+                    all_sources_for_log.append(source_info)
+            
+            # 記錄這次的問答
+            qa_log.append({
+                "question": query,
+                "answer": answer,
+                "sources": all_sources_for_log
+            })
+            save_qa_log(qa_log)
 
     except Exception as e:
-        print(f"\n發生錯誤: {e}")
-        print("請確認Google API金鑰是否正確且有效")
-
-
+        print(f"\n處理問題時發生錯誤: {e}")
+        print("請確認 Google API 金鑰是否正確且有效。")
+        return
 if __name__ == "__main__":
-    # --- 主要執行區 ---
     if ALL_CHUNKS is None:
         exit()
         
-    # 注意：全域變數 PDF_PATH 在此互動模式下已無直接作用
-    # 這裡我們示範如何為指定的檔案建立互動問答
-    pdf_to_query_name = "2025 Generative Information Retrieval HW1.pdf"
-    print(f"--- 正在為 {pdf_to_query_name} 建立互動式問答環境 ---")
+    os.makedirs(KNOWLEDGE_DIR, exist_ok=True)
 
-    pipeline_components = setup_rag_pipeline(pdf_to_query_name, EMBEDDING_MODEL)
-    rag_pipeline = pipeline_components["qa_chain"]
+    # --- 1. 初始化共用元件 ---
+    print("--- 正在初始化 RAG 系統 ---")
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+    llm = ChatGoogleGenerativeAI(model=LLM_MODEL)
     
-    # 範例問題
-    example_query = "What is the submission deadline for the final project report?"
-    ask_question(rag_pipeline, example_query)
+    # --- 2. 設定主要和補充檢索器 ---
+    pdf_to_query_name = "2025 Generative Information Retrieval HW1"
+    print(f"\n--- 正在為 '{pdf_to_query_name}' 設定主要知識庫 ---")
+    primary_retriever = setup_primary_retriever(pdf_to_query_name, EMBEDDING_MODEL, embeddings)
+    
+    knowledge_retriever = setup_knowledge_retriever(KNOWLEDGE_DIR, EMBEDDING_MODEL, embeddings)
+    
+    # --- 3. 載入 QA 日誌 ---
+    qa_log = load_qa_log()
 
-    # 互動式問答迴圈
-    print("\n已進入互動模式，輸入 'exit' 來離開")
+    print("\n--- RAG 系統已就緒 ---")
+
+    # --- 4. 互動式問答迴圈 ---
+    print("\n已進入互動模式，輸入 'exit' 來離開。")
     while True:
         user_query = input("\n輸入問題: ")
         if user_query.lower() == 'exit':
             break
-        ask_question(rag_pipeline, user_query)
+        if not user_query.strip():
+            continue
+        
+        ask_question(
+            query=user_query,
+            primary_retriever=primary_retriever,
+            knowledge_retriever=knowledge_retriever,
+            llm=llm,
+            qa_log=qa_log
+        )

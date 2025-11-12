@@ -1,7 +1,7 @@
 [
     {
         "chunk_id": 0,
-        "content": "Fall  2025  Generative  Information  Retrieval  Final  Project   Sep  16,  2025   \nFinal  Project\n \nIntroduction  In  the  final  project,  you  will  work  in  groups  of  3  ~  4  students  to  apply  methods  learned  in  the  \nclass\n \nto\n \na\n \nreal-world\n \nproblem\n \nthat\n \nyou\n \nare\n \ninterested\n \nin.\n \nIn\n \nthis\n \nfinal\n \nproject,\n \nthe\n \ntopic\n \nscope\n \nincludes\n \nbut\n \nis\n \nnot\n \nlimited\n \nto:\n \n(1)\n \nPersonalization\n \nand\n \nRecommendations\n \nin\n \nSearch,\n \n(2)\n \nAgentic\n \nIR,\n \n(3)\n \nMultimodal\n \nRetrieval,\n \nand\n \n(4)\n \nDomain-Specialized\n \nRAG.\n \nAll\n \nof\n \nthem\n \nhave\n \nbeen\n \npopular\n \nand\n \nhighly\n \nfocused\n \ntopics\n \nin\n \nrecent\n \nyears,\n \nespecially\n \nwhen\n \nLLMs\n \nare\n \nintroduced.\n \nThe\n \ndetailed\n \ndescriptions\n \nof\n \neach\n \ntopic\n \nare\n \nlisted\n \nbelow\n \n(“Topics\n \nIntroduction”\n \nsection)\n \nfor\n \nyour\n \nreference\n \nand\n \ninspiration\n \nof\n \nyour\n \nproject.\n \nGrading  \nThe  final  project  score  is  composed  of  four  parts  (total  40%):",
+        "content": "Fall  2025  Generative  Information  Retrieval  Final  Project   Sep  16,  2025   \nFinal  Project\n \nIntroduction  In  the  final  project,  you  will  work  in  groups  of  3  ~  4  students  to  apply  methods  learned  in  the  \nclass\n \nto\n \na\n \nreal-world\n \nproblem\n \nthat\n \nyou\n \nare\n \ninterested\n \nin. In\n \nthis\n \nfinal\n \nproject,\n \nthe\n \ntopic\n \nscope\n \nincludes\n \nbut\n \nis\n \nnot\n \nlimited\n \nto:\n \n(1)\n \nPersonalization\n \nand\n \nRecommendations\n \nin\n \nSearch,\n \n(2)\n \nAgentic\n \nIR,\n \n(3)\n \nMultimodal\n \nRetrieval,\n \nand\n \n(4)\n \nDomain-Specialized\n \nRAG. All\n \nof\n \nthem\n \nhave\n \nbeen\n \npopular\n \nand\n \nhighly\n \nfocused\n \ntopics\n \nin\n \nrecent\n \nyears,\n \nespecially\n \nwhen\n \nLLMs\n \nare\n \nintroduced. The\n \ndetailed\n \ndescriptions\n \nof\n \neach\n \ntopic\n \nare\n \nlisted\n \nbelow\n \n(“Topics\n \nIntroduction”\n \nsection)\n \nfor\n \nyour\n \nreference\n \nand\n \ninspiration\n \nof\n \nyour\n \nproject. Grading  \nThe  final  project  score  is  composed  of  four  parts  (total  40%):  \n●  Initial  Project  Proposal  Presentation  (5%)  ●  Mid-term  Project  Results  Presentation  (10%)  ●  Final  Project  Report  (15%)  ●  Final  Project  Presentation  (10%)  \nRequirements  ●  Initial  Project  Proposal  Presentation  ( 10/7  in  class )  ○  You  will  present  what  you  plan  to  do  for  your  project  in  3  minutes . It’s  totally  \nfine\n \nif\n \nyour\n \nproject\n \neventually\n \nevolves\n \ninto\n \nsomething\n \nelse;\n \nthe\n \nproposal\n \nis\n \njust\n \nto\n \nhelp\n \nyou\n \nto\n \nclearly\n \nframe\n \nyour\n \nproject. However,\n \nyour\n \npresentation\n \nshould\n \nlay\n \nout\n \na\n \nsensible\n \ninitial\n \nplan. Below\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem. Why  might  this  problem  be  \nimportant?",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -15,7 +15,7 @@
     },
     {
         "chunk_id": 1,
-        "content": "below\n \n(“Topics\n \nIntroduction”\n \nsection)\n \nfor\n \nyour\n \nreference\n \nand\n \ninspiration\n \nof\n \nyour\n \nproject.\n \nGrading  \nThe  final  project  score  is  composed  of  four  parts  (total  40%):  \n●  Initial  Project  Proposal  Presentation  (5%)  ●  Mid-term  Project  Results  Presentation  (10%)  ●  Final  Project  Report  (15%)  ●  Final  Project  Presentation  (10%)  \nRequirements  ●  Initial  Project  Proposal  Presentation  ( 10/7  in  class )  ○  You  will  present  what  you  plan  to  do  for  your  project  in  3  minutes .  It’s  totally  \nfine\n \nif\n \nyour\n \nproject\n \neventually\n \nevolves\n \ninto\n \nsomething\n \nelse;\n \nthe\n \nproposal\n \nis\n \njust\n \nto\n \nhelp\n \nyou\n \nto\n \nclearly\n \nframe\n \nyour\n \nproject.\n \nHowever,\n \nyour\n \npresentation\n \nshould\n \nlay\n \nout\n \na\n \nsensible\n \ninitial\n \nplan.\n \nBelow\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem.  Why  might  this  problem  be  \nimportant?\n \nWhat\n \nIR\n \ntasks\n \nwill\n \nyou",
+        "content": "What\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress? ○  Dataset  -  Description  of  the  dataset  you  plan  to  use  –  where  you  will  collect  \nthe\n \ndataset\n \nfrom,\n \nthe\n \ndomain\n \nof\n \nthe\n \ndataset,\n \nthe\n \nsize\n \nof\n \nthe\n \ndataset,\n \netc. ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic  \nevaluation\n \nmetric\n \nyou\n \nwill\n \nuse\n \nfor\n \nquantitative\n \nevaluation. If\n \nyou\n \nhave\n \nany",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -29,7 +29,7 @@
     },
     {
         "chunk_id": 2,
-        "content": "initial\n \nplan.\n \nBelow\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem.  Why  might  this  problem  be  \nimportant?\n \nWhat\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress?\n ○  Dataset  -  Description  of  the  dataset  you  plan  to  use  –  where  you  will  collect  \nthe\n \ndataset\n \nfrom,\n \nthe\n \ndomain\n \nof\n \nthe\n \ndataset,\n \nthe\n \nsize\n \nof\n \nthe\n \ndataset,\n \netc.\n ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic  \nevaluation\n \nmetric\n \nyou\n \nwill\n \nuse\n \nfor\n \nquantitative\n \nevaluation.\n \nIf\n \nyou\n \nhave\n \nany",
+        "content": "particular  ideas  about  the  qualitative  evaluation  you  will  do,  you  can  describe  \nthat\n \ntoo. ●  Mid-term  Project  Results  Presentation  ( 11/11  in  class )  ○  You  will  present  the  related  work  you  have  surveyed,  the  methods  you  have  \nimplemented,\n \nand\n \nyour\n \npreliminary\n \nresults\n \nat\n \nthe\n \nproject\n \nin\n \n5\n \nminutes\n. Below\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -37,13 +37,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 0,
-            "page_label": "1"
+            "page": 1,
+            "page_label": "2"
         }
     },
     {
         "chunk_id": 3,
-        "content": "particular  ideas  about  the  qualitative  evaluation  you  will  do,  you  can  describe  \nthat\n \ntoo.\n ●  Mid-term  Project  Results  Presentation  ( 11/11  in  class )  ○  You  will  present  the  related  work  you  have  surveyed,  the  methods  you  have  \nimplemented,\n \nand\n \nyour\n \npreliminary\n \nresults\n \nat\n \nthe\n \nproject\n \nin\n \n5\n \nminutes\n.\n \nBelow\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem.  Why  might  this  problem  be  \nimportant?\n \nWhat\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress?\n ○  Literature  Review  /  Related  work  -  Description  of  other  work/papers  you've  \nfound\n \nthat\n \nare\n \nrelated\n \nto\n \nyour\n \ntask.\n \nJust\n \nmentioning\n \na\n \npaper\n \nis\n \nnot\n \nsufficient;\n \nyou\n \nshould\n \nat\n \nleast\n \ngo\n \ninto\n \nbrief\n \ndetail\n \nabout\n \nwhat\n \nkind\n \nof\n \napproach\n \nthey\n \nare\n \nusing/how\n \nit\n \nrelates\n \nto\n \nyour\n \nwork\n \nif\n \nit's\n \nnot\n \nimmediately\n \nclear.\n \nPlease\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto",
+        "content": "Why  might  this  problem  be  \nimportant? What\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress? ○  Literature  Review  /  Related  work  -  Description  of  other  work/papers  you've  \nfound\n \nthat\n \nare\n \nrelated\n \nto\n \nyour\n \ntask. Just\n \nmentioning\n \na\n \npaper\n \nis\n \nnot\n \nsufficient;\n \nyou\n \nshould\n \nat\n \nleast\n \ngo\n \ninto\n \nbrief\n \ndetail\n \nabout\n \nwhat\n \nkind\n \nof\n \napproach\n \nthey\n \nare\n \nusing/how\n \nit\n \nrelates\n \nto\n \nyour\n \nwork\n \nif\n \nit's\n \nnot\n \nimmediately\n \nclear.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -57,7 +57,7 @@
     },
     {
         "chunk_id": 4,
-        "content": "about\n \nwhat\n \nkind\n \nof\n \napproach\n \nthey\n \nare\n \nusing/how\n \nit\n \nrelates\n \nto\n \nyour\n \nwork\n \nif\n \nit's\n \nnot\n \nimmediately\n \nclear.\n \nPlease\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto\n \nor\n \ndiffers\n \nfrom\n \nthese\n \nrelated\n \nworks.\n ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask.\n \nYou\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks.\n \nDon't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)?\n ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic  \nevaluation\n \nmetric\n \nyou\n \nwill\n \nuse\n \nfor",
+        "content": "Please\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto\n \nor\n \ndiffers\n \nfrom\n \nthese\n \nrelated\n \nworks. ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask. You\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks. Don't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)? ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic  \nevaluation\n \nmetric\n \nyou\n \nwill\n \nuse\n \nfor\n \nquantitative\n \nevaluation. If\n \nyou\n \nhave\n \nany\n \nparticular\n \nideas\n \nabout\n \nthe\n \nqualitative\n \nevaluation\n \nyou\n \nwill\n \ndo,\n \nyou\n \ncan\n \ndescribe\n \nthat\n \ntoo. ○  Preliminary  Results  -  Describe  the  performance  and  your  preliminary  results  \nanalysis\n \nto\n \nsee\n \nwhether\n \nthe\n \nresults\n \nare\n \nexpected. If\n \nthe\n \nresults\n \ndo\n \nnot\n \nmeet\n \nyour\n \nexpectations,\n \nthink\n \nabout\n \nwhat\n \nyou\n \ncan\n \ndo\n \nto\n \nenhance\n \nthe\n \nperformance\n \nand\n \npresent\n \nyour\n \nnext\n \nstep\n \nplan. ●  Final  Project  Reports  ( submission  deadline:  12/15  23:59 )  ○  You  have  to  submit  a  final  project  report  to  showcase  your  project  results. We\n \nnote\n \nthat\n \nmaking\n \na\n \ndemo\n \nfor\n \nyour\n \nwork\n \nis\n \noptional\n. Below\n \nis\n \na\n \nfull\n \ndescription\n \nof\n \nwhat\n \nyou\n \nshould\n \ninclude\n \nin\n \nyour\n \nfinal\n \nproject\n \nreport. We\n \nwill\n \ngrade\n \nyour\n \nscore\n \nbased\n \non\n \nthese\n \nsections. ○  Introduction  -  Brief  overview  of  your  problem. Why  might  this  problem  be  \nimportant? What\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress? ○  Literature  Review  /  Related  work  -  Description  of  other  work/papers  you've  \nfound\n \nthat\n \nare\n \nrelated\n \nto\n \nyour\n \ntask. Just\n \nmentioning\n \na\n \npaper\n \nis\n \nnot\n \nsufficient;\n \nyou\n \nshould\n \nat\n \nleast\n \ngo\n \ninto\n \nbrief\n \ndetail\n \nabout\n \nwhat\n \nkind\n \nof\n \napproach\n \nthey\n \nare\n \nusing/how\n \nit\n \nrelates\n \nto\n \nyour\n \nwork\n \nif\n \nit's\n \nnot\n \nimmediately\n \nclear. Please\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto\n \nor\n \ndiffers\n \nfrom\n \nthese\n \nrelated\n \nworks. ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Baseline  -  Description  and  implementation  of  your  baseline.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -71,7 +71,7 @@
     },
     {
         "chunk_id": 5,
-        "content": "inputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)?\n ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic  \nevaluation\n \nmetric\n \nyou\n \nwill\n \nuse\n \nfor\n \nquantitative\n \nevaluation.\n \nIf\n \nyou\n \nhave\n \nany\n \nparticular\n \nideas\n \nabout\n \nthe\n \nqualitative\n \nevaluation\n \nyou\n \nwill\n \ndo,\n \nyou\n \ncan\n \ndescribe\n \nthat\n \ntoo.\n ○  Preliminary  Results  -  Describe  the  performance  and  your  preliminary  results  \nanalysis\n \nto\n \nsee\n \nwhether\n \nthe\n \nresults\n \nare\n \nexpected.\n \nIf\n \nthe\n \nresults\n \ndo\n \nnot\n \nmeet\n \nyour\n \nexpectations,\n \nthink\n \nabout\n \nwhat\n \nyou\n \ncan\n \ndo\n \nto\n \nenhance\n \nthe\n \nperformance\n \nand\n \npresent\n \nyour\n \nnext\n \nstep\n \nplan.\n ●  Final  Project  Reports  ( submission  deadline:  12/15  23:59 )  ○  You  have  to  submit  a  final  project  report  to  showcase  your  project  results.  \nWe\n \nnote\n \nthat\n \nmaking\n \na\n \ndemo\n \nfor\n \nyour\n \nwork\n \nis\n \noptional\n.\n \nBelow\n \nis\n \na\n \nfull\n \ndescription\n \nof\n \nwhat\n \nyou",
+        "content": "○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask. You\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks. Don't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)? ○  Evaluation  Metric  -  Please  include  what  metrics,  both  qualitative  and  \nquantitative,\n \nyou\n \nare\n \nusing\n \nto\n \nevaluate\n \nthe\n \nsuccess\n \nof\n \nyour\n \nproblem. If\n \nrelevant\n \nplease\n \ninclude\n \nequations\n \nto\n \ndescribe\n \nyour\n \nmetrics. ○  Results  &  Analysis  -  Please  include  the  performance  of  your  baseline  as  well  \nas\n \nthe\n \nperformance\n \nof\n \nyour\n \nmain\n \napproach\n \nso\n \nfar\n \nand\n \nany\n \nexperiments\n \nthat\n \nyou\n \nhave\n \nrun. If\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,\n \nthen\n \nyou\n \ncan\n \nanalyze\n \nhow\n \nyou\n \nget\n \nthe\n \nresults\n \nyou\n \nwant. To\n \nsum\n \nup,\n \ninclude\n \nan\n \nanalysis\n \nof\n \nyour\n \nresults,\n \nand\n \nhow\n \nthis\n \nmight\n \ninform\n \nyour\n \nnext\n \nsteps\n \nin\n \nfine-tuning\n \nyour\n \nmain\n \napproach. The\n \nanalysis\n \nis\n \nvery\n \nimportant,\n \nand\n \nit\n \nrequires\n \nyou\n \nto\n \nthink\n \nabout\n \nwhat\n \nyour\n \nresults\n \nmight\n \nmean. ○  Error  Analysis  -  Describe  a  few  experiments  that  you  ran  that  show  the  \nproperties\n \n(both\n \npros\n \nand\n \ncons)\n \nof\n \nyour\n \nsystem. Analyze\n \nthe\n \ndata\n \nand\n \nshow\n \neither\n \ngraphs\n \nor\n \ntables\n \nto\n \nillustrate\n \nyour\n \npoint. What's\n \nthe\n \ntake-away\n \nmessage?",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -79,13 +79,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 1,
-            "page_label": "2"
+            "page": 2,
+            "page_label": "3"
         }
     },
     {
         "chunk_id": 6,
-        "content": "We\n \nnote\n \nthat\n \nmaking\n \na\n \ndemo\n \nfor\n \nyour\n \nwork\n \nis\n \noptional\n.\n \nBelow\n \nis\n \na\n \nfull\n \ndescription\n \nof\n \nwhat\n \nyou\n \nshould\n \ninclude\n \nin\n \nyour\n \nfinal\n \nproject\n \nreport.\n \nWe\n \nwill\n \ngrade\n \nyour\n \nscore\n \nbased\n \non\n \nthese\n \nsections.\n ○  Introduction  -  Brief  overview  of  your  problem.  Why  might  this  problem  be  \nimportant?\n \nWhat\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress?\n ○  Literature  Review  /  Related  work  -  Description  of  other  work/papers  you've  \nfound\n \nthat\n \nare\n \nrelated\n \nto\n \nyour\n \ntask.\n \nJust\n \nmentioning\n \na\n \npaper\n \nis\n \nnot\n \nsufficient;\n \nyou\n \nshould\n \nat\n \nleast\n \ngo\n \ninto\n \nbrief\n \ndetail\n \nabout\n \nwhat\n \nkind\n \nof\n \napproach\n \nthey\n \nare\n \nusing/how\n \nit\n \nrelates\n \nto\n \nyour\n \nwork\n \nif\n \nit's\n \nnot\n \nimmediately\n \nclear.\n \nPlease\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto\n \nor\n \ndiffers\n \nfrom\n \nthese\n \nrelated\n \nworks.\n ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,",
+        "content": "Were\n \nthere\n \nany\n \nsurprises? Use\n \nthese\n \nexperiments\n \nin\n \nthe\n \nerror\n \nanalysis\n \nto\n \ndescribe\n \npotential\n \nerrors\n \nin\n \nthe\n \nmethod\n \nand\n \nwhy\n \nthey\n \nmay\n \nhave\n \noccurred. ○  Future  Work  -  This  section  can  be  short,  but  please  include  some  ideas  about  \nhow\n \nyou\n \ncould\n \nimprove\n \nyour\n \nmodel\n \nif\n \nyou\n \nhad\n \nmore\n \ntime.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -93,13 +93,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 1,
-            "page_label": "2"
+            "page": 2,
+            "page_label": "3"
         }
     },
     {
         "chunk_id": 7,
-        "content": "Please\n \nalso\n \nmention\n \nwhy\n \nyour\n \nwork\n \nrelates\n \nto\n \nor\n \ndiffers\n \nfrom\n \nthese\n \nrelated\n \nworks.\n ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Baseline  -  Description  and  implementation  of  your  baseline.",
+        "content": "This\n \ncan\n \nalso\n \ninclude\n \nany\n \nchallenges\n \nyou're\n \nrunning\n \ninto\n \nand\n \nhow\n \nyou\n \nmight\n \nfix\n \nthem. ○  Code  -  Please  include  a  link  to  your  Github/Bitbucket/etc. Your  repo  should  \ninclude\n \nan\n \noverview\n \nof\n \nthe\n \ntask,\n \nprerequisite\n \n(your\n \ncoding\n \nenvironment,\n \npackage\n \nversion\n \n(e.g.,\n \nrequirements.txt\n \nin\n \nPython)),\n \nusage,\n \nhyperparameters\n \nyou\n \nset,\n \nexperiment\n \nresults,\n \nand\n \nso\n \non. ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each  \nmember\n \nwith\n \nproportions\n. We\n \nunderstand\n \nthe\n \ncondition\n \nthat\n \nsome\n \nmembers\n \nmay\n \nfail\n \nto\n \ncontribute\n \nto\n \nthis\n \nproject;\n \nthus,\n \nwe\n \nwill\n \nadjust\n \nyour\n \nscore\n \nif\n \nthe\n \ncontributions\n \nare\n \nsignificantly\n \nunequal. Feel\n \nfree\n \nto\n \nlet\n \nus\n \nknow\n \nif\n \nyou\n \nhave\n \nany\n \nconcerns\n \nabout\n \nthis\n \npart. ○  References  -  Please  include  a  reference  section  with  properly  formatted  \ncitations\n \n(any\n \nformat\n \nof\n \nyour\n \nchoice). ●  Final  Project  Presentation  ( 12/23  in  class )  ○  You  will  present  what  you’ve  done  for  your  project  in  5  minutes . Note  that  \nyou\n \ndon’t\n \nhave\n \nmuch\n \ntime\n \nto\n \ndescribe\n \nall\n \nthe\n \ndetails\n \nin\n \nthe\n \npresentation,\n \nand\n \nTA\n \nwill\n \nconduct\n \na\n \nstrict\n \ntime\n \ncontrol. Below\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem. Why  might  this  problem  be  \nimportant? What\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress? ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Baseline  -  Description  and  implementation  of  your  baseline. You  don't  need  to  \ngo\n \ninto\n \ntoo\n \nmuch\n \ndetail,\n \nbut\n \nplease\n \nstill\n \ninclude\n \na\n \nbrief\n \noverview.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -107,13 +107,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 1,
-            "page_label": "2"
+            "page": 2,
+            "page_label": "3"
         }
     },
     {
         "chunk_id": 8,
-        "content": "○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask.\n \nYou\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks.\n \nDon't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)?\n ○  Evaluation  Metric  -  Please  include  what  metrics,  both  qualitative  and  \nquantitative,\n \nyou\n \nare\n \nusing\n \nto\n \nevaluate\n \nthe\n \nsuccess\n \nof\n \nyour\n \nproblem.\n \nIf\n \nrelevant\n \nplease\n \ninclude\n \nequations\n \nto\n \ndescribe\n \nyour\n \nmetrics.\n ○  Results  &  Analysis  -  Please  include  the  performance  of  your  baseline  as  well  \nas\n \nthe\n \nperformance\n \nof\n \nyour\n \nmain\n \napproach\n \nso\n \nfar\n \nand\n \nany\n \nexperiments\n \nthat\n \nyou\n \nhave\n \nrun.\n \nIf\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,",
+        "content": "○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask. You\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks. Don't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)? ○  Evaluation  Metric  -  Please  include  what  metrics,  both  qualitative  and  \nquantitative,\n \nyou\n \nare\n \nusing\n \nto\n \nevaluate\n \nthe\n \nsuccess\n \nof\n \nyour\n \nproblem. ○  Results  &  Analysis  -  Please  include  the  performance  of  your  baseline  as  well  \nas\n \nthe\n \nperformance\n \nof\n \nyour\n \nmain\n \napproach\n \nso\n \nfar\n \nand\n \nany\n \nexperiments\n \nthat\n \nyou\n \nhave\n \nrun. If\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,\n \nthen\n \nyou\n \ncan\n \nanalyze\n \nhow\n \nyou\n \nget\n \nthe\n \nresults\n \nyou\n \nwant. ○  Future  Work  -  This  section  can  be  short,  but  please  include  some  ideas  about  \nhow\n \nyou\n \ncould\n \nimprove\n \nyour\n \nmodel\n \nif\n \nyou\n \nhad\n \nmore\n \ntime. This\n \ncan\n \nalso\n \ninclude\n \nany\n \nchallenges\n \nyou're\n \nrunning\n \ninto\n \nand\n \nhow\n \nyou\n \nmight\n \nfix\n \nthem. Discussion  \nTA  will  open  a  discussion  forum  Final  Project  討 論 區  on  NewE3  of  the  course,  and  you  can  \nask\n \nquestions\n \nabout\n \nthe\n \nfinal\n \nproject\n \nin\n \nthe\n \nforum. TA\n \nwill\n \nanswer\n \nas\n \nsoon\n \nas\n \npossible.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -121,13 +121,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 2,
-            "page_label": "3"
+            "page": 3,
+            "page_label": "4"
         }
     },
     {
         "chunk_id": 9,
-        "content": "the\n \nperformance\n \nof\n \nyour\n \nmain\n \napproach\n \nso\n \nfar\n \nand\n \nany\n \nexperiments\n \nthat\n \nyou\n \nhave\n \nrun.\n \nIf\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,\n \nthen\n \nyou\n \ncan\n \nanalyze\n \nhow\n \nyou\n \nget\n \nthe\n \nresults\n \nyou\n \nwant.\n \nTo\n \nsum\n \nup,\n \ninclude\n \nan\n \nanalysis\n \nof\n \nyour\n \nresults,\n \nand\n \nhow\n \nthis\n \nmight\n \ninform\n \nyour\n \nnext\n \nsteps\n \nin\n \nfine-tuning\n \nyour\n \nmain\n \napproach.\n \nThe\n \nanalysis\n \nis\n \nvery\n \nimportant,\n \nand\n \nit\n \nrequires\n \nyou\n \nto\n \nthink\n \nabout\n \nwhat\n \nyour\n \nresults\n \nmight\n \nmean.\n ○  Error  Analysis  -  Describe  a  few  experiments  that  you  ran  that  show  the  \nproperties\n \n(both\n \npros\n \nand\n \ncons)\n \nof\n \nyour\n \nsystem.\n \nAnalyze\n \nthe\n \ndata\n \nand\n \nshow\n \neither\n \ngraphs\n \nor\n \ntables\n \nto\n \nillustrate\n \nyour\n \npoint.\n \nWhat's\n \nthe\n \ntake-away\n \nmessage?\n \nWere\n \nthere\n \nany\n \nsurprises?\n \nUse\n \nthese\n \nexperiments\n \nin\n \nthe\n \nerror\n \nanalysis\n \nto\n \ndescribe\n \npotential\n \nerrors\n \nin",
+        "content": "Final  Project  Report  Submission  You  have  to  submit  the  final  project  report. In  contrast,  the  initial  proposal,  mid-term  \npresentation,\n \nand\n \nfinal\n \nproject\n \npresentation\n \nwill\n \nbe\n \ngraded\n \non\n \nyour\n \npresentation\n \nperformance\n \nalone,\n \nand\n \ndo\n \nnot\n \nrequire\n \nany\n \nfile\n \nsubmission. 1. The  submission  deadline  for  the  final  project  report  is  12/15  (Mon.)  23:59. 2. Submit  a  report with  the  filename  of  Project_Team{TEAM_ID}_report.pdf . The  \nreport\n \nshould\n \ncontain\n \nall\n \ndetails\n \nand\n \nyour\n \ncode\n \nlink\n. 3. We  won’t  accept  any  late  submissions  for  the  final  project. 4. We  only  accept  one  pdf  file ,  and  the  wrong  file  format  or  naming  format  causes  -10  \npoints\n \nto\n \nyour\n \nscore. 5. Only  1  team  member  needs  to  submit  the  file  to  NewE3 . 6. (Optional)  We  highly  encourage  each  team  to  formulate  the  project  into  a  paper  and  \nsubmit\n \nto\n \na\n \ntop\n \nconference\n \n(e.g.,\n \nACL2026,\n \nSIGIR2026,\n \nKDD2026),\n \nwhich\n \nwill\n \nbecome\n \na\n \nstrong\n \nrecord\n \non\n \nyour\n \nresume. Feel\n \nfree\n \nto\n \ncontact\n \nTA\n \nYu-Chien\n \nTang\n \nand\n \nProf.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -135,13 +135,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 2,
-            "page_label": "3"
+            "page": 3,
+            "page_label": "4"
         }
     },
     {
         "chunk_id": 10,
-        "content": "illustrate\n \nyour\n \npoint.\n \nWhat's\n \nthe\n \ntake-away\n \nmessage?\n \nWere\n \nthere\n \nany\n \nsurprises?\n \nUse\n \nthese\n \nexperiments\n \nin\n \nthe\n \nerror\n \nanalysis\n \nto\n \ndescribe\n \npotential\n \nerrors\n \nin\n \nthe\n \nmethod\n \nand\n \nwhy\n \nthey\n \nmay\n \nhave\n \noccurred.\n ○  Future  Work  -  This  section  can  be  short,  but  please  include  some  ideas  about  \nhow\n \nyou\n \ncould\n \nimprove\n \nyour\n \nmodel\n \nif\n \nyou\n \nhad\n \nmore\n \ntime.\n \nThis\n \ncan\n \nalso\n \ninclude\n \nany\n \nchallenges\n \nyou're\n \nrunning\n \ninto\n \nand\n \nhow\n \nyou\n \nmight\n \nfix\n \nthem.\n ○  Code  -  Please  include  a  link  to  your  Github/Bitbucket/etc.  Your  repo  should  \ninclude\n \nan\n \noverview\n \nof\n \nthe\n \ntask,\n \nprerequisite\n \n(your\n \ncoding\n \nenvironment,\n \npackage\n \nversion\n \n(e.g.,\n \nrequirements.txt\n \nin\n \nPython)),\n \nusage,\n \nhyperparameters\n \nyou\n \nset,\n \nexperiment\n \nresults,\n \nand\n \nso\n \non.\n ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each  \nmember\n \nwith\n \nproportions\n.\n \nWe",
+        "content": "Yen\n \nto\n \ndiscuss\n \nmore\n \ndetails\n \non\n \nthe\n \npaper\n \nsubmission,\n \nand\n \nwe\n \nare\n \nextremely\n \nwelcome\n \nto\n \ncooperate\n \nwith\n \nyou. 7. Please  don’t  hesitate  to  reach  out  via  email  tommytyc.cs13@nycu.edu.tw if  you  have  any  questions. Topics  Introduction",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -149,13 +149,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 2,
-            "page_label": "3"
+            "page": 3,
+            "page_label": "4"
         }
     },
     {
         "chunk_id": 11,
-        "content": "hyperparameters\n \nyou\n \nset,\n \nexperiment\n \nresults,\n \nand\n \nso\n \non.\n ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each  \nmember\n \nwith\n \nproportions\n.\n \nWe\n \nunderstand\n \nthe\n \ncondition\n \nthat\n \nsome\n \nmembers\n \nmay\n \nfail\n \nto\n \ncontribute\n \nto\n \nthis\n \nproject;\n \nthus,\n \nwe\n \nwill\n \nadjust\n \nyour\n \nscore\n \nif\n \nthe\n \ncontributions\n \nare\n \nsignificantly\n \nunequal.\n \nFeel\n \nfree\n \nto\n \nlet\n \nus\n \nknow\n \nif\n \nyou\n \nhave\n \nany\n \nconcerns\n \nabout\n \nthis\n \npart.\n ○  References  -  Please  include  a  reference  section  with  properly  formatted  \ncitations\n \n(any\n \nformat\n \nof\n \nyour\n \nchoice).\n ●  Final  Project  Presentation  ( 12/23  in  class )  ○  You  will  present  what  you’ve  done  for  your  project  in  5  minutes .  Note  that  \nyou\n \ndon’t\n \nhave\n \nmuch\n \ntime\n \nto\n \ndescribe\n \nall\n \nthe\n \ndetails\n \nin\n \nthe\n \npresentation,\n \nand\n \nTA\n \nwill\n \nconduct\n \na\n \nstrict\n \ntime\n \ncontrol.\n \nBelow\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:",
+        "content": "●  Personalization  and  Recommendations  in  Search  ○  As  users  increasingly  demand  richer  and  more  intuitive  search  experiences,  \npersonalization\n \nand\n \nrecommendation\n \nplay\n \na\n \ncentral\n \nrole\n \nin\n \nmodern\n \ninformation\n \nretrieval. Search\n \nsystems\n \nare\n \nevolving\n \nfrom\n \nstatic\n \nquery-document\n \nmatching\n \nto\n \ndynamic,\n \nuser-centered\n \nservices\n \nthat\n \nincorporate\n \ncontext,\n \npreferences,\n \nbehavioral\n \nsignals,\n \nand\n \nmultimodal\n \ncues. The\n \nintegration\n \nof\n \nlarge\n \nlanguage\n \nmodels\n \n(LLMs),\n \ngenerative\n \nrecommendation,\n \nmultimodal\n \nrepresentations,\n \nand\n \nreinforcement\n \nlearning\n \nhas\n \ntransformed\n \npersonalization\n \nin\n \nsearch. These\n \nadvances\n \nenable\n \nsystems\n \nto\n \nbetter\n \ncapture\n \nuser\n \nintent,\n \nmitigate\n \ncold-start\n \nchallenges,\n \nsupport\n \ncross-domain\n \nlearning,\n \nand\n \noffer\n \nconversational\n \nand\n \ninteractive\n \nrecommendation\n \nexperiences. Despite\n \nthese\n \nopportunities,\n \nkey\n \nchallenges\n \nremain:\n \nbalancing\n \npersonalization\n \nwith\n \nfairness\n \nand\n \nprivacy,\n \nreducing\n \nhallucination\n \nand\n \nbias\n \nin\n \ngenerative\n \nrecommendation,\n \nand\n \nensuring\n \nscalability\n \nand\n \nresponsiveness\n \nat\n \nweb\n \nscale. Addressing\n \nthese\n \nissues\n \nwill\n \nbe\n \ncritical\n \nfor\n \nthe\n \nnext\n \ngeneration\n \nof\n \npersonalized\n \nsearch\n \nsystems. ○  Topics  include  but  are  not  limited  to:  ■  Personalized  search  and  recommendation  models  ■  Generative  recommendation  in  search  ■  Conversational  and  context-aware  recommendation  systems  ■  Sequential  recommendation  and  user  behavior  modeling  for  search  ■  Cross-domain  personalization  and  transfer  learning  ■  Multimodal  personalization  in  search  (text,  images,  video,  charts)  ■  Knowledge  graph–enhanced  personalization  and  recommendation  ■  Fairness,  privacy,  and  security  challenges  in  personalized  search  ■  User  interaction  and  explainability  for  transparency  and  trust  ■  Real-time  and  large-scale  personalized  search  system  design  ■  Adversarial  attacks  and  defenses  in  personalized  search  ■  Evaluation  metrics:  diversity,  novelty,  coverage,  and  user  satisfaction  ■  Human–AI  collaboration  and  interactive  design  for  personalized  search  ●  Agentic  IR  (https://sites.google.com/view/ai4ir/aaai-2025)  ○  The  field  of  information  retrieval  has  significantly  transformed  with  the  \nintegration\n \nof\n \nAI\n \ntechnologies. AI\n \nagents,\n \nespecially\n \nthose\n \nleveraging\n \nLLMs\n \nand\n \nvast\n \ncomputational\n \npower,\n \nhave\n \nrevolutionized\n \ninformation\n \nretrieval,\n \nprocessing,\n \nand\n \npresentation. LLM\n \nagents,\n \nwith\n \ntool-call,\n \nadvanced\n \nmemory,\n \nreasoning,\n \nand\n \nplanning\n \ncapabilities,\n \ncan\n \nperform\n \ncomplex\n \ntasks,\n \nengage\n \nin\n \ncoherent\n \nconversations,\n \nand\n \nprovide\n \npersonalized\n \nresponses. Despite\n \nthese\n \nadvancements,\n \nchallenges\n \nsuch\n \nas\n \nensuring\n \nrelevance\n \nand\n \naccuracy,\n \nmitigating\n \nbiases,\n \nproviding\n \nreal-time\n \nresponses,\n \nand\n \nmaintaining\n \ndata\n \nsecurity\n \nremain.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -163,13 +163,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 2,
-            "page_label": "3"
+            "page": 4,
+            "page_label": "5"
         }
     },
     {
         "chunk_id": 12,
-        "content": "don’t\n \nhave\n \nmuch\n \ntime\n \nto\n \ndescribe\n \nall\n \nthe\n \ndetails\n \nin\n \nthe\n \npresentation,\n \nand\n \nTA\n \nwill\n \nconduct\n \na\n \nstrict\n \ntime\n \ncontrol.\n \nBelow\n \nis\n \nwhat\n \nyou\n \nneed\n \nto\n \ncover:\n ○  Introduction  -  Brief  overview  of  your  problem.  Why  might  this  problem  be  \nimportant?\n \nWhat\n \nIR\n \ntasks\n \nwill\n \nyou\n \naddress?\n ○  Dataset  -  Description  of  data  you  are  using  -  the  size  of  the  dataset,  \ndistribution\n \nof\n \nclasses,\n \nany\n \npreprocessing\n \nyou\n \nneeded\n \nto\n \ndo\n ○  Baseline  -  Description  and  implementation  of  your  baseline.  You  don't  need  to  \ngo\n \ninto\n \ntoo\n \nmuch\n \ndetail,\n \nbut\n \nplease\n \nstill\n \ninclude\n \na\n \nbrief\n \noverview.",
+        "content": "○  Topics  Include  but  not  limited  to:",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -177,13 +177,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 2,
-            "page_label": "3"
+            "page": 4,
+            "page_label": "5"
         }
     },
     {
         "chunk_id": 13,
-        "content": "○  Main  Approach  -  Propose  a  model,  an  algorithm,  or  a  framework  for  tackling  \nyour\n \ntask.\n \nYou\n \nshould\n \ndescribe\n \nthe\n \nmodel\n \nand\n \nalgorithm\n \nin\n \ndetail\n \nand\n \nuse\n \na\n \nconcrete\n \nexample\n \nto\n \ndemonstrate\n \nhow\n \nit\n \nworks.\n \nDon't\n \ndescribe\n \nmethods\n \nin\n \ngeneral;\n \ndescribe\n \nprecisely\n \nhow\n \nthey\n \napply\n \nto\n \nyour\n \nproblem\n \n(what\n \nare\n \nthe\n \ninputs/outputs,\n \nvariables,\n \nfactors,\n \nstates,\n \netc.)?\n ○  Evaluation  Metric  -  Please  include  what  metrics,  both  qualitative  and  \nquantitative,\n \nyou\n \nare\n \nusing\n \nto\n \nevaluate\n \nthe\n \nsuccess\n \nof\n \nyour\n \nproblem.\n ○  Results  &  Analysis  -  Please  include  the  performance  of  your  baseline  as  well  \nas\n \nthe\n \nperformance\n \nof\n \nyour\n \nmain\n \napproach\n \nso\n \nfar\n \nand\n \nany\n \nexperiments\n \nthat\n \nyou\n \nhave\n \nrun.\n \nIf\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,\n \nthen\n \nyou\n \ncan\n \nanalyze\n \nhow\n \nyou\n \nget\n \nthe\n \nresults\n \nyou\n \nwant.",
+        "content": "■  Agentic  Retrieval  System  ■  Agentic  Conversational  Recommendation  ■  AI  Agent  for  Personalization  ■  AI  Agent  for  Sequential  Recommendation  ■  AI  Agent  for  Contextual  Information  Retrieval  ■  AI  Agents  for  Cross-lingual  and  Multimodal  Retrieval  ■  Retrieval-Augmented  Generation  Searching  System  ■  Optimization  of  AI  Agent  Retrieval  Models  ■  Bias  Mitigation  in  AI-driven  Information  Retrieval  ■  Interpretable  Generative  Retrieval  System  ■  Adversarial  Attacks  and  Defenses  in  Agentic  Retrieval  System  ■  Ethical  Considerations  in  Agentic  Information  Retrieval  ■  Human-AI  Collaboration  in  Information  Retrieval  ■  Evaluation  for  Agentic  Information  Retrieval  ■  Scalability  and  Efficiency  in  AI  Agent  Retrieval  ●  Multimodal  Retrieval  ○  As  digital  content  continues  to  diversify,  users  increasingly  need  to  search  \nacross\n \nnot\n \nonly\n \ntext\n \nbut\n \nalso\n \nimages,\n \nvideos,\n \naudio,\n \ntables,\n \nand\n \ncharts. Multimodal\n \nretrieval\n \naims\n \nto\n \nunify\n \nrepresentations\n \nand\n \nunderstanding\n \nacross\n \ndifferent\n \nmodalities,\n \nenabling\n \nsearch\n \nsystems\n \nto\n \ndeliver\n \nmore\n \nprecise,\n \nnatural,\n \nand\n \ninteractive\n \naccess\n \nto\n \ninformation. Recent\n \nadvances\n \nin\n \nlarge\n \nlanguage\n \nmodels\n \n(LLMs),\n \nmultimodal\n \npre-trained\n \nmodels\n \n(e.g.,\n \nCLIP,\n \nBLIP,\n \nvideo-language\n \nmodels),\n \nand\n \ndiffusion-based\n \ngenerative\n \nmodels\n \nhave\n \naccelerated\n \nprogress\n \nin\n \nthis\n \nfield. These\n \ntechnologies\n \nmake\n \nit\n \npossible\n \nto\n \nalign\n \nand\n \nembed\n \nheterogeneous\n \nmodalities\n \ninto\n \nshared\n \nsemantic\n \nspaces,\n \nsupporting\n \ntasks\n \nsuch\n \nas\n \ntext-to-image\n \nretrieval,\n \nspeech-to-video\n \nretrieval,\n \nor\n \ntext-to-chart\n \nretrieval.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -191,13 +191,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 3,
-            "page_label": "4"
+            "page": 5,
+            "page_label": "6"
         }
     },
     {
         "chunk_id": 14,
-        "content": "that\n \nyou\n \nhave\n \nrun.\n \nIf\n \nyour\n \nresults\n \nare\n \ncreative\n \nand\n \ncan’t\n \nfind\n \na\n \nproper\n \nbaseline,\n \nthen\n \nyou\n \ncan\n \nanalyze\n \nhow\n \nyou\n \nget\n \nthe\n \nresults\n \nyou\n \nwant.\n ○  Future  Work  -  This  section  can  be  short,  but  please  include  some  ideas  about  \nhow\n \nyou\n \ncould\n \nimprove\n \nyour\n \nmodel\n \nif\n \nyou\n \nhad\n \nmore\n \ntime.\n \nThis\n \ncan\n \nalso\n \ninclude\n \nany\n \nchallenges\n \nyou're\n \nrunning\n \ninto\n \nand\n \nhow\n \nyou\n \nmight\n \nfix\n \nthem.\n \nDiscussion  \nTA  will  open  a  discussion  forum  Final  Project  討 論 區  on  NewE3  of  the  course,  and  you  can  \nask\n \nquestions\n \nabout\n \nthe\n \nfinal\n \nproject\n \nin\n \nthe\n \nforum.\n \nTA\n \nwill\n \nanswer\n \nas\n \nsoon\n \nas\n \npossible.\n \nFinal  Project  Report  Submission  You  have  to  submit  the  final  project  report.  In  contrast,  the  initial  proposal,  mid-term  \npresentation,\n \nand\n \nfinal\n \nproject\n \npresentation\n \nwill\n \nbe\n \ngraded\n \non\n \nyour\n \npresentation\n \nperformance\n \nalone,\n \nand\n \ndo\n \nnot",
+        "content": "Nevertheless,\n \nmultimodal\n \nretrieval\n \nfaces\n \nsignificant\n \nchallenges:\n \nsemantic\n \nalignment\n \nand\n \nfusion\n \nacross\n \nmodalities,\n \nfine-grained\n \nretrieval\n \nand\n \ninterpretability,\n \nmultilingual\n \nand\n \ncross-cultural\n \nunderstanding,\n \nand\n \nefficiency\n \nat\n \nscale. With\n \ngrowing\n \napplications\n \nin\n \neducation,\n \nhealthcare,\n \nentertainment,\n \ne-commerce,\n \nand\n \nsocial\n \nplatforms,\n \nbalancing\n \nperformance,\n \ntransparency,\n \nand\n \nfairness\n \nis\n \nan\n \nurgent\n \nand\n \nimportant\n \nresearch\n \ndirection. ○  Topics  include  but  are  not  limited  to:  ■  Multimodal  retrieval  model  design  (text–image,  text–video,  \naudio–visual,\n \ntables/charts)\n ■  Integration  of  large  language  models  with  multimodal  retrieval  ■  Generative  multimodal  retrieval  ■  Fine-grained  retrieval  and  interpretability  (e.g.,  localizing  relevant  \nimage/video\n \nsegments)",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -205,13 +205,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 3,
-            "page_label": "4"
+            "page": 5,
+            "page_label": "6"
         }
     },
     {
         "chunk_id": 15,
-        "content": "presentation,\n \nand\n \nfinal\n \nproject\n \npresentation\n \nwill\n \nbe\n \ngraded\n \non\n \nyour\n \npresentation\n \nperformance\n \nalone,\n \nand\n \ndo\n \nnot\n \nrequire\n \nany\n \nfile\n \nsubmission.\n \n1.  The  submission  deadline  for  the  final  project  report  is  12/15  (Mon.)  23:59.  2.  Submit  a  report with  the  filename  of  Project_Team{TEAM_ID}_report.pdf .  The  \nreport\n \nshould\n \ncontain\n \nall\n \ndetails\n \nand\n \nyour\n \ncode\n \nlink\n.\n \n 3.  We  won’t  accept  any  late  submissions  for  the  final  project.  4.  We  only  accept  one  pdf  file ,  and  the  wrong  file  format  or  naming  format  causes  -10  \npoints\n \nto\n \nyour\n \nscore.\n 5.  Only  1  team  member  needs  to  submit  the  file  to  NewE3 .  6.  (Optional)  We  highly  encourage  each  team  to  formulate  the  project  into  a  paper  and  \nsubmit\n \nto\n \na\n \ntop\n \nconference\n \n(e.g.,\n \nACL2026,\n \nSIGIR2026,\n \nKDD2026),\n \nwhich\n \nwill\n \nbecome\n \na\n \nstrong\n \nrecord\n \non\n \nyour\n \nresume.\n \nFeel\n \nfree\n \nto\n \ncontact\n \nTA",
+        "content": "■  Multilingual  and  cross-cultural  multimodal  retrieval  ■  Conversational  and  interactive  multimodal  retrieval  ■  Real-time  and  large-scale  multimodal  retrieval  system  design  ■  Adversarial  attacks  and  robustness  in  multimodal  models  ■  Evaluation  benchmarks  for  multimodal  retrieval  (accuracy,  diversity,  \nexplainability)\n ■  Human–AI  collaboration  in  multimodal  retrieval  applications  ●  Domain-Specialized  RAG  (e.g.,  Clinical  &  Legal  Focus)  ○  Retrieval-Augmented  Generation  (RAG)  has  demonstrated  strong  potential  in  \nopen-domain\n \napplications,\n \nbut\n \nin\n \nspecialized\n \ndomains\n \nsuch\n \nas\n \nclinical\n \nmedicine\n \nand\n \nlaw,\n \nit\n \nfaces\n \nfar\n \ngreater\n \nchallenges\n \nin\n \naccuracy,\n \ninterpretability,\n \nand\n \ncompliance. In\n \nthese\n \nhigh-stakes\n \nfields,\n \ntolerance\n \nfor\n \nerror\n \nis\n \nextremely\n \nlow,\n \nand\n \nany\n \nhallucination\n \nor\n \nimprecise\n \nanswer\n \ncan\n \nlead\n \nto\n \nserious\n \nconsequences.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -219,13 +219,13 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 3,
-            "page_label": "4"
+            "page": 6,
+            "page_label": "7"
         }
     },
     {
         "chunk_id": 16,
-        "content": "submit\n \nto\n \na\n \ntop\n \nconference\n \n(e.g.,\n \nACL2026,\n \nSIGIR2026,\n \nKDD2026),\n \nwhich\n \nwill\n \nbecome\n \na\n \nstrong\n \nrecord\n \non\n \nyour\n \nresume.\n \nFeel\n \nfree\n \nto\n \ncontact\n \nTA\n \nYu-Chien\n \nTang\n \nand\n \nProf.\n \nYen\n \nto\n \ndiscuss\n \nmore\n \ndetails\n \non\n \nthe\n \npaper\n \nsubmission,\n \nand\n \nwe\n \nare\n \nextremely\n \nwelcome\n \nto\n \ncooperate\n \nwith\n \nyou.\n 7.  Please  don’t  hesitate  to  reach  out  via  email  tommytyc.cs13@nycu.edu.tw if  you  have  any  questions.  \nTopics  Introduction",
+        "content": "Thus,\n \ntailoring\n \nRAG\n \nsystems\n \nto\n \ndomain-specific\n \nrequirements\n \nis\n \na\n \ncritical\n \ndirection\n \nfor\n \nfuture\n \nresearch. In\n \nclinical\n \napplications,\n \nRAG\n \nsystems\n \nmust\n \nintegrate\n \nmedical\n \nknowledge\n \nbases,\n \nelectronic\n \nhealth\n \nrecords,\n \nclinical\n \nguidelines,\n \nand\n \nscholarly\n \nliterature\n \nto\n \nprovide\n \nevidence-based\n \nrecommendations\n \nand\n \nexplanations,\n \nall\n \nwhile\n \nsafeguarding\n \npatient\n \nprivacy\n \nand\n \ndata\n \nsecurity. In\n \nlegal\n \ncontexts,\n \nRAG\n \nmust\n \nprocess\n \ncase\n \nlaw,\n \nstatutes,\n \ncontracts,\n \nand\n \nlitigation\n \ndocuments\n \nwith\n \nhigh\n \nprecision,\n \nensuring\n \nfaithful\n \ncitation,\n \ntraceability,\n \nand\n \nsupport\n \nfor\n \nlawyers\n \nand\n \nresearchers\n \nworking\n \nwithin\n \ncomplex\n \ncontexts. Key\n \nchallenges\n \ninclude\n \nbuilding\n \nhigh-quality\n \ndomain\n \ncorpora,\n \nreducing\n \nhallucination\n \nwhile\n \nimproving\n \ncitation\n \nfidelity,\n \nincorporating\n \ndomain-specific\n \nterminology\n \nand\n \nreasoning,\n \nand\n \nmaintaining\n \nboth\n \nreal-time\n \nresponsiveness\n \nand\n \nregulatory\n \ncompliance. As\n \ndemand\n \ngrows\n \nfor\n \nAI-assisted\n \nsystems\n \nin\n \nhealthcare\n \nand\n \nlegal\n \npractice,\n \ndomain-specialized\n \nRAG\n \nwill\n \nbecome\n \nincreasingly\n \nimportant\n \nin\n \nboth\n \nresearch\n \nand\n \nreal-world\n \napplications. ○  Topics  include  but  are  not  limited  to:  ■  Domain-specific  RAG  system  design  for  clinical  and  legal  contexts  ■  High-fidelity  retrieval  and  citation  generation  ■  Integration  of  domain-specific  terminology  and  knowledge  graphs  in  \nRAG\n ■  Structured  retrieval  and  contextual  modeling  of  case  law  and  medical  \nliterature\n ■  Hallucination  detection  and  suppression  in  domain-specific  QA  \nsystems\n ■  Interpretability  and  traceability  in  domain-specialized  RAG  systems  ■  Multilingual  clinical/legal  RAG  challenges  and  opportunities",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
             "creator": "PyPDF",
@@ -233,180 +233,12 @@
             "title": "114-1 IR Final Project Requirements",
             "source": "114-1 IR Final Project Requirements.pdf",
             "total_pages": 8,
-            "page": 3,
-            "page_label": "4"
+            "page": 6,
+            "page_label": "7"
         }
     },
     {
         "chunk_id": 17,
-        "content": "●  Personalization  and  Recommendations  in  Search  ○  As  users  increasingly  demand  richer  and  more  intuitive  search  experiences,  \npersonalization\n \nand\n \nrecommendation\n \nplay\n \na\n \ncentral\n \nrole\n \nin\n \nmodern\n \ninformation\n \nretrieval.\n \nSearch\n \nsystems\n \nare\n \nevolving\n \nfrom\n \nstatic\n \nquery-document\n \nmatching\n \nto\n \ndynamic,\n \nuser-centered\n \nservices\n \nthat\n \nincorporate\n \ncontext,\n \npreferences,\n \nbehavioral\n \nsignals,\n \nand\n \nmultimodal\n \ncues.\n \nThe\n \nintegration\n \nof\n \nlarge\n \nlanguage\n \nmodels\n \n(LLMs),\n \ngenerative\n \nrecommendation,\n \nmultimodal\n \nrepresentations,\n \nand\n \nreinforcement\n \nlearning\n \nhas\n \ntransformed\n \npersonalization\n \nin\n \nsearch.\n \nThese\n \nadvances\n \nenable\n \nsystems\n \nto\n \nbetter\n \ncapture\n \nuser\n \nintent,\n \nmitigate\n \ncold-start\n \nchallenges,\n \nsupport\n \ncross-domain\n \nlearning,\n \nand\n \noffer\n \nconversational\n \nand\n \ninteractive\n \nrecommendation\n \nexperiences.\n \nDespite\n \nthese\n \nopportunities,\n \nkey\n \nchallenges\n \nremain:\n \nbalancing",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 4,
-            "page_label": "5"
-        }
-    },
-    {
-        "chunk_id": 18,
-        "content": "support\n \ncross-domain\n \nlearning,\n \nand\n \noffer\n \nconversational\n \nand\n \ninteractive\n \nrecommendation\n \nexperiences.\n \nDespite\n \nthese\n \nopportunities,\n \nkey\n \nchallenges\n \nremain:\n \nbalancing\n \npersonalization\n \nwith\n \nfairness\n \nand\n \nprivacy,\n \nreducing\n \nhallucination\n \nand\n \nbias\n \nin\n \ngenerative\n \nrecommendation,\n \nand\n \nensuring\n \nscalability\n \nand\n \nresponsiveness\n \nat\n \nweb\n \nscale.\n \nAddressing\n \nthese\n \nissues\n \nwill\n \nbe\n \ncritical\n \nfor\n \nthe\n \nnext\n \ngeneration\n \nof\n \npersonalized\n \nsearch\n \nsystems.",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 4,
-            "page_label": "5"
-        }
-    },
-    {
-        "chunk_id": 19,
-        "content": "○  Topics  include  but  are  not  limited  to:  ■  Personalized  search  and  recommendation  models  ■  Generative  recommendation  in  search  ■  Conversational  and  context-aware  recommendation  systems  ■  Sequential  recommendation  and  user  behavior  modeling  for  search  ■  Cross-domain  personalization  and  transfer  learning  ■  Multimodal  personalization  in  search  (text,  images,  video,  charts)  ■  Knowledge  graph–enhanced  personalization  and  recommendation  ■  Fairness,  privacy,  and  security  challenges  in  personalized  search  ■  User  interaction  and  explainability  for  transparency  and  trust  ■  Real-time  and  large-scale  personalized  search  system  design  ■  Adversarial  attacks  and  defenses  in  personalized  search  ■  Evaluation  metrics:  diversity,  novelty,  coverage,  and  user  satisfaction  ■  Human–AI  collaboration  and  interactive  design  for  personalized  search  ●  Agentic  IR",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 4,
-            "page_label": "5"
-        }
-    },
-    {
-        "chunk_id": 20,
-        "content": "search  ■  Evaluation  metrics:  diversity,  novelty,  coverage,  and  user  satisfaction  ■  Human–AI  collaboration  and  interactive  design  for  personalized  search  ●  Agentic  IR  (https://sites.google.com/view/ai4ir/aaai-2025)  ○  The  field  of  information  retrieval  has  significantly  transformed  with  the",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 4,
-            "page_label": "5"
-        }
-    },
-    {
-        "chunk_id": 21,
-        "content": "integration\n \nof\n \nAI\n \ntechnologies.\n \nAI\n \nagents,\n \nespecially\n \nthose\n \nleveraging\n \nLLMs\n \nand\n \nvast\n \ncomputational\n \npower,\n \nhave\n \nrevolutionized\n \ninformation\n \nretrieval,\n \nprocessing,\n \nand\n \npresentation.\n \nLLM\n \nagents,\n \nwith\n \ntool-call,\n \nadvanced\n \nmemory,\n \nreasoning,\n \nand\n \nplanning\n \ncapabilities,\n \ncan\n \nperform\n \ncomplex\n \ntasks,\n \nengage\n \nin\n \ncoherent\n \nconversations,\n \nand\n \nprovide\n \npersonalized\n \nresponses.\n \nDespite\n \nthese\n \nadvancements,\n \nchallenges\n \nsuch\n \nas\n \nensuring\n \nrelevance\n \nand\n \naccuracy,\n \nmitigating\n \nbiases,\n \nproviding\n \nreal-time\n \nresponses,\n \nand\n \nmaintaining\n \ndata\n \nsecurity\n \nremain.\n \n ○  Topics  Include  but  not  limited  to:",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 4,
-            "page_label": "5"
-        }
-    },
-    {
-        "chunk_id": 22,
-        "content": "■  Agentic  Retrieval  System  ■  Agentic  Conversational  Recommendation  ■  AI  Agent  for  Personalization  ■  AI  Agent  for  Sequential  Recommendation  ■  AI  Agent  for  Contextual  Information  Retrieval  ■  AI  Agents  for  Cross-lingual  and  Multimodal  Retrieval  ■  Retrieval-Augmented  Generation  Searching  System  ■  Optimization  of  AI  Agent  Retrieval  Models  ■  Bias  Mitigation  in  AI-driven  Information  Retrieval  ■  Interpretable  Generative  Retrieval  System  ■  Adversarial  Attacks  and  Defenses  in  Agentic  Retrieval  System  ■  Ethical  Considerations  in  Agentic  Information  Retrieval  ■  Human-AI  Collaboration  in  Information  Retrieval  ■  Evaluation  for  Agentic  Information  Retrieval  ■  Scalability  and  Efficiency  in  AI  Agent  Retrieval  ●  Multimodal  Retrieval  ○  As  digital  content  continues  to  diversify,  users  increasingly  need  to  search  \nacross\n \nnot\n \nonly\n \ntext\n \nbut\n \nalso\n \nimages,\n \nvideos,\n \naudio,\n \ntables,\n \nand",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 5,
-            "page_label": "6"
-        }
-    },
-    {
-        "chunk_id": 23,
-        "content": "across\n \nnot\n \nonly\n \ntext\n \nbut\n \nalso\n \nimages,\n \nvideos,\n \naudio,\n \ntables,\n \nand\n \ncharts.\n \nMultimodal\n \nretrieval\n \naims\n \nto\n \nunify\n \nrepresentations\n \nand\n \nunderstanding\n \nacross\n \ndifferent\n \nmodalities,\n \nenabling\n \nsearch\n \nsystems\n \nto\n \ndeliver\n \nmore\n \nprecise,\n \nnatural,\n \nand\n \ninteractive\n \naccess\n \nto\n \ninformation.\n \nRecent\n \nadvances\n \nin\n \nlarge\n \nlanguage\n \nmodels\n \n(LLMs),\n \nmultimodal\n \npre-trained\n \nmodels\n \n(e.g.,\n \nCLIP,\n \nBLIP,\n \nvideo-language\n \nmodels),\n \nand\n \ndiffusion-based\n \ngenerative\n \nmodels\n \nhave\n \naccelerated\n \nprogress\n \nin\n \nthis\n \nfield.\n \nThese\n \ntechnologies\n \nmake\n \nit\n \npossible\n \nto\n \nalign\n \nand\n \nembed\n \nheterogeneous\n \nmodalities\n \ninto\n \nshared\n \nsemantic\n \nspaces,\n \nsupporting\n \ntasks\n \nsuch\n \nas\n \ntext-to-image\n \nretrieval,\n \nspeech-to-video\n \nretrieval,\n \nor\n \ntext-to-chart\n \nretrieval.\n \nNevertheless,\n \nmultimodal\n \nretrieval\n \nfaces\n \nsignificant\n \nchallenges:\n \nsemantic\n \nalignment\n \nand\n \nfusion\n \nacross\n \nmodalities,",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 5,
-            "page_label": "6"
-        }
-    },
-    {
-        "chunk_id": 24,
-        "content": "retrieval,\n \nor\n \ntext-to-chart\n \nretrieval.\n \nNevertheless,\n \nmultimodal\n \nretrieval\n \nfaces\n \nsignificant\n \nchallenges:\n \nsemantic\n \nalignment\n \nand\n \nfusion\n \nacross\n \nmodalities,\n \nfine-grained\n \nretrieval\n \nand\n \ninterpretability,\n \nmultilingual\n \nand\n \ncross-cultural\n \nunderstanding,\n \nand\n \nefficiency\n \nat\n \nscale.\n \nWith\n \ngrowing\n \napplications\n \nin\n \neducation,\n \nhealthcare,\n \nentertainment,\n \ne-commerce,\n \nand\n \nsocial\n \nplatforms,\n \nbalancing\n \nperformance,\n \ntransparency,\n \nand\n \nfairness\n \nis\n \nan\n \nurgent\n \nand\n \nimportant\n \nresearch\n \ndirection.\n ○  Topics  include  but  are  not  limited  to:  ■  Multimodal  retrieval  model  design  (text–image,  text–video,  \naudio–visual,\n \ntables/charts)\n ■  Integration  of  large  language  models  with  multimodal  retrieval  ■  Generative  multimodal  retrieval  ■  Fine-grained  retrieval  and  interpretability  (e.g.,  localizing  relevant  \nimage/video\n \nsegments)",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 5,
-            "page_label": "6"
-        }
-    },
-    {
-        "chunk_id": 25,
-        "content": "■  Multilingual  and  cross-cultural  multimodal  retrieval  ■  Conversational  and  interactive  multimodal  retrieval  ■  Real-time  and  large-scale  multimodal  retrieval  system  design  ■  Adversarial  attacks  and  robustness  in  multimodal  models  ■  Evaluation  benchmarks  for  multimodal  retrieval  (accuracy,  diversity,  \nexplainability)\n ■  Human–AI  collaboration  in  multimodal  retrieval  applications  ●  Domain-Specialized  RAG  (e.g.,  Clinical  &  Legal  Focus)  ○  Retrieval-Augmented  Generation  (RAG)  has  demonstrated  strong  potential  in  \nopen-domain\n \napplications,\n \nbut\n \nin\n \nspecialized\n \ndomains\n \nsuch\n \nas\n \nclinical\n \nmedicine\n \nand\n \nlaw,\n \nit\n \nfaces\n \nfar\n \ngreater\n \nchallenges\n \nin\n \naccuracy,\n \ninterpretability,\n \nand\n \ncompliance.\n \nIn\n \nthese\n \nhigh-stakes\n \nfields,\n \ntolerance\n \nfor\n \nerror\n \nis\n \nextremely\n \nlow,\n \nand\n \nany\n \nhallucination\n \nor\n \nimprecise\n \nanswer\n \ncan\n \nlead\n \nto\n \nserious\n \nconsequences.\n \nThus,\n \ntailoring\n \nRAG",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 6,
-            "page_label": "7"
-        }
-    },
-    {
-        "chunk_id": 26,
-        "content": "high-stakes\n \nfields,\n \ntolerance\n \nfor\n \nerror\n \nis\n \nextremely\n \nlow,\n \nand\n \nany\n \nhallucination\n \nor\n \nimprecise\n \nanswer\n \ncan\n \nlead\n \nto\n \nserious\n \nconsequences.\n \nThus,\n \ntailoring\n \nRAG\n \nsystems\n \nto\n \ndomain-specific\n \nrequirements\n \nis\n \na\n \ncritical\n \ndirection\n \nfor\n \nfuture\n \nresearch.\n \nIn\n \nclinical\n \napplications,\n \nRAG\n \nsystems\n \nmust\n \nintegrate\n \nmedical\n \nknowledge\n \nbases,\n \nelectronic\n \nhealth\n \nrecords,\n \nclinical\n \nguidelines,\n \nand\n \nscholarly\n \nliterature\n \nto\n \nprovide\n \nevidence-based\n \nrecommendations\n \nand\n \nexplanations,\n \nall\n \nwhile\n \nsafeguarding\n \npatient\n \nprivacy\n \nand\n \ndata\n \nsecurity.\n \nIn\n \nlegal\n \ncontexts,\n \nRAG\n \nmust\n \nprocess\n \ncase\n \nlaw,\n \nstatutes,\n \ncontracts,\n \nand\n \nlitigation\n \ndocuments\n \nwith\n \nhigh\n \nprecision,\n \nensuring\n \nfaithful\n \ncitation,\n \ntraceability,\n \nand\n \nsupport\n \nfor\n \nlawyers\n \nand\n \nresearchers\n \nworking\n \nwithin\n \ncomplex\n \ncontexts.\n \nKey\n \nchallenges\n \ninclude\n \nbuilding\n \nhigh-quality\n \ndomain",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 6,
-            "page_label": "7"
-        }
-    },
-    {
-        "chunk_id": 27,
-        "content": "faithful\n \ncitation,\n \ntraceability,\n \nand\n \nsupport\n \nfor\n \nlawyers\n \nand\n \nresearchers\n \nworking\n \nwithin\n \ncomplex\n \ncontexts.\n \nKey\n \nchallenges\n \ninclude\n \nbuilding\n \nhigh-quality\n \ndomain\n \ncorpora,\n \nreducing\n \nhallucination\n \nwhile\n \nimproving\n \ncitation\n \nfidelity,\n \nincorporating\n \ndomain-specific\n \nterminology\n \nand\n \nreasoning,\n \nand\n \nmaintaining\n \nboth\n \nreal-time\n \nresponsiveness\n \nand\n \nregulatory\n \ncompliance.\n \nAs\n \ndemand\n \ngrows\n \nfor\n \nAI-assisted\n \nsystems\n \nin\n \nhealthcare\n \nand\n \nlegal\n \npractice,\n \ndomain-specialized\n \nRAG\n \nwill\n \nbecome\n \nincreasingly\n \nimportant\n \nin\n \nboth\n \nresearch\n \nand\n \nreal-world\n \napplications.\n ○  Topics  include  but  are  not  limited  to:  ■  Domain-specific  RAG  system  design  for  clinical  and  legal  contexts  ■  High-fidelity  retrieval  and  citation  generation  ■  Integration  of  domain-specific  terminology  and  knowledge  graphs  in  \nRAG",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 6,
-            "page_label": "7"
-        }
-    },
-    {
-        "chunk_id": 28,
-        "content": "RAG\n ■  Structured  retrieval  and  contextual  modeling  of  case  law  and  medical  \nliterature\n ■  Hallucination  detection  and  suppression  in  domain-specific  QA  \nsystems\n ■  Interpretability  and  traceability  in  domain-specialized  RAG  systems  ■  Multilingual  clinical/legal  RAG  challenges  and  opportunities",
-        "metadata": {
-            "producer": "Skia/PDF m142 Google Docs Renderer",
-            "creator": "PyPDF",
-            "creationdate": "",
-            "title": "114-1 IR Final Project Requirements",
-            "source": "114-1 IR Final Project Requirements.pdf",
-            "total_pages": 8,
-            "page": 6,
-            "page_label": "7"
-        }
-    },
-    {
-        "chunk_id": 29,
         "content": "■  Human–AI  collaboration:  how  clinicians  and  lawyers  work  with  RAG  \nsystems\n ■  Adversarial  risks  and  misinformation  in  professional  RAG  applications  ■  Real-world  use  cases:  clinical  decision  support  and  legal  research  \nassistance\n ■  Benchmarks  and  evaluation  metrics  for  specialized  RAG  (accuracy,  \nreliability,\n \nexplainability)\n \n        Reference  source:  Part  of  this  project  requirement  is  directly  inspired  by  Stanford  CS224N.",
         "metadata": {
             "producer": "Skia/PDF m142 Google Docs Renderer",
@@ -420,7 +252,7 @@
         }
     },
     {
-        "chunk_id": 30,
+        "chunk_id": 18,
         "content": "2025 Information Retrieval and Extraction\nHW 1\n1",
         "metadata": {
             "producer": "PyPDF",
@@ -434,7 +266,7 @@
         }
     },
     {
-        "chunk_id": 31,
+        "chunk_id": 19,
         "content": "Task introduction\n● Measure document relevance to a query\n- Implement vector model and BM25 using only numpy to compare query and code snippet \nrelevance  \n- Apply Dense Retrieval with a pre-trained model, and compare it with a ﬁne-tuned version using \ntrain_queries.csv\n- Y ou must implement TF-IDF and BM25 by yourself \n(Don‘t use BM25Okapi, cosine_similarity, TﬁdfVectorizer, etc.)  \n● Requirement\n- Upload your submission to Kaggle\n- Submit a report and your source code to E3 \n● Deadine is 11/11 (Tue.) 23:59, no late submission\n2",
         "metadata": {
             "producer": "PyPDF",
@@ -448,8 +280,8 @@
         }
     },
     {
-        "chunk_id": 32,
-        "content": "Dataset \n● code_snippets.csv\n- Code snippets and their corresponding Code IDs.\n● train_queries.csv\n- Contains queries and corresponding code snippets.\n● test_queries.csv\n- Contains queries that need to be used for prediction.\n● sample_submission.csv\n- a sample submission ﬁle in the correct format.\n3",
+        "chunk_id": 20,
+        "content": "Dataset \n● code_snippets.csv\n- Code snippets and their corresponding Code IDs. ● train_queries.csv\n- Contains queries and corresponding code snippets. ● test_queries.csv\n- Contains queries that need to be used for prediction. ● sample_submission.csv\n- a sample submission ﬁle in the correct format.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -462,7 +294,21 @@
         }
     },
     {
-        "chunk_id": 33,
+        "chunk_id": 21,
+        "content": "3",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 2,
+            "page_label": "3"
+        }
+    },
+    {
+        "chunk_id": 22,
         "content": "Training Data\n4",
         "metadata": {
             "producer": "PyPDF",
@@ -476,7 +322,7 @@
         }
     },
     {
-        "chunk_id": 34,
+        "chunk_id": 23,
         "content": "Testing Data\n5",
         "metadata": {
             "producer": "PyPDF",
@@ -490,8 +336,8 @@
         }
     },
     {
-        "chunk_id": 35,
-        "content": "Requirements & Scoring Metrics\n● Please implement both TF-IDF and BM25 as the scoring methods for Sparse Retrieval, and \nadditionally apply a Dense Retrieval approach using a pre-trained model (e.g., CodeBERT) \nto retrieve the most relevant code snippets.\n● For each query, output the top-10 most similar code IDs in a single line, separated by \nspaces.\n● The ﬁnal scoring result will be conducted as Recall@10.\n○ If the ground-truth code ID appears in the top-10 retrieved results, it will be counted \nas 1.\n○ Otherwise, it will be counted as 0.\n○ The ﬁnal score is the average across all queries.\n6",
+        "chunk_id": 24,
+        "content": "Requirements & Scoring Metrics\n● Please implement both TF-IDF and BM25 as the scoring methods for Sparse Retrieval, and \nadditionally apply a Dense Retrieval approach using a pre-trained model (e.g., CodeBERT) \nto retrieve the most relevant code snippets. ● For each query, output the top-10 most similar code IDs in a single line, separated by \nspaces.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -504,8 +350,22 @@
         }
     },
     {
-        "chunk_id": 36,
-        "content": "Kaggle Submission\n● kaggle link\n● Display team name : <student ID>\n● Submission format \n- A  500*2 .csv ﬁle, ﬁrst row is for the column name and the last 500 rows for your result.\n- Column name must be query_id and code_id.\n● There is one simple baseline and one strong baseline. Beat them to \nachieve a higher score.\n7\nThree numbers \nseparated by \nspaces",
+        "chunk_id": 25,
+        "content": "● The ﬁnal scoring result will be conducted as Recall@10. ○ If the ground-truth code ID appears in the top-10 retrieved results, it will be counted \nas 1. ○ Otherwise, it will be counted as 0. ○ The ﬁnal score is the average across all queries. 6",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 5,
+            "page_label": "6"
+        }
+    },
+    {
+        "chunk_id": 26,
+        "content": "Kaggle Submission\n● kaggle link\n● Display team name : <student ID>\n● Submission format \n- A  500*2 .csv ﬁle, ﬁrst row is for the column name and the last 500 rows for your result. - Column name must be query_id and code_id. ● There is one simple baseline and one strong baseline.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -518,8 +378,22 @@
         }
     },
     {
-        "chunk_id": 37,
-        "content": "Kaggle Submission\n● The scoring metric is Recall@10.\n● Y ou can submit at most 5 times each day.\n● Y ou can choose 2 of the submissions to be considered for the private leaderboard, \nor will otherwise default to the best public scoring submissions.\nY ou can only view your private leaderboard score after the competition has ended. \n● Public leaderboard is calculated with 50% of the test data, and private leaderboard \nis calculated with other 50% of the test data, so the ﬁnal standings may be diﬀerent. \n● Please tune your model parameters using your own validation set instead of \nadjusting parameters based on the public leaderboard. Otherwise, it's easy to \noverﬁt, leading to poor performance on the private leaderboard.\n8",
+        "chunk_id": 27,
+        "content": "Beat them to \nachieve a higher score. 7\nThree numbers \nseparated by \nspaces",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 6,
+            "page_label": "7"
+        }
+    },
+    {
+        "chunk_id": 28,
+        "content": "Kaggle Submission\n● The scoring metric is Recall@10. ● Y ou can submit at most 5 times each day. ● Y ou can choose 2 of the submissions to be considered for the private leaderboard, \nor will otherwise default to the best public scoring submissions. Y ou can only view your private leaderboard score after the competition has ended. ● Public leaderboard is calculated with 50% of the test data, and private leaderboard \nis calculated with other 50% of the test data, so the ﬁnal standings may be diﬀerent. ● Please tune your model parameters using your own validation set instead of \nadjusting parameters based on the public leaderboard. Otherwise, it's easy to \noverﬁt, leading to poor performance on the private leaderboard.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -532,8 +406,22 @@
         }
     },
     {
-        "chunk_id": 38,
-        "content": "Change your team name\nRemember to change the team name to <student ID>, or there will be a deduction \nof 5 points for HW 1.\n9",
+        "chunk_id": 29,
+        "content": "8",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 7,
+            "page_label": "8"
+        }
+    },
+    {
+        "chunk_id": 30,
+        "content": "Change your team name\nRemember to change the team name to <student ID>, or there will be a deduction \nof 5 points for HW 1. 9",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -546,8 +434,8 @@
         }
     },
     {
-        "chunk_id": 39,
-        "content": "Report Submission\nAnswer the following 3 questions:\n1. In Sparse Retrieval methods, compare the retrieval performance of TF-IDF and BM25. \nWhich method performs better in this assignment? Analyze the possible reasons \nbehind the diﬀerence (e.g., term frequency handling, document length normalization).\n2. In Dense Retrieval methods, compare the performance of using a pre-trained model \ndirectly versus ﬁne-tuning with training data. Which approach performs better? Explain \nthe possible reasons for the diﬀerence.\n3. In the Text-to-Code Retrieval task, compare the diﬀerences and performance between \nSparse Retrieval and Dense Retrieval. Beyond these approaches, what other methods \n(e.g., Retrieve-and-Re-rank) could further improve retrieval performance?\nPlease answer the questions in detail to receive full points for each question.\n10",
+        "chunk_id": 31,
+        "content": "Report Submission\nAnswer the following 3 questions:\n1. In Sparse Retrieval methods, compare the retrieval performance of TF-IDF and BM25. Which method performs better in this assignment? Analyze the possible reasons \nbehind the diﬀerence (e.g., term frequency handling, document length normalization). 2. In Dense Retrieval methods, compare the performance of using a pre-trained model \ndirectly versus ﬁne-tuning with training data. Which approach performs better? Explain \nthe possible reasons for the diﬀerence. 3. In the Text-to-Code Retrieval task, compare the diﬀerences and performance between \nSparse Retrieval and Dense Retrieval. Beyond these approaches, what other methods \n(e.g., Retrieve-and-Re-rank) could further improve retrieval performance? Please answer the questions in detail to receive full points for each question.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -560,7 +448,21 @@
         }
     },
     {
-        "chunk_id": 40,
+        "chunk_id": 32,
+        "content": "10",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 9,
+            "page_label": "10"
+        }
+    },
+    {
+        "chunk_id": 33,
         "content": "Grading policy\n● Kaggle (70%) \n- 30% based on the public leaderboard score and 70% based on the private \nleaderboard score\n- Leaderboard score consists of basic score and ranking score\n■ Basic score :\nOver strong baseline : 55\nOver simple bassline : 40\nUnder simple baseline : 25\n■ Ranking score:\n15-(15/N)*(ranking-1), N=numbers of people in the interval\n● Report (30%)\n- 10 for each quesiton\n11",
         "metadata": {
             "producer": "PyPDF",
@@ -574,8 +476,8 @@
         }
     },
     {
-        "chunk_id": 41,
-        "content": "E3 Submission\nSubmission format:\n● hw1_<student_id>.zip\n○ source code: hw1_<student_id>.py or  hw1_<student ID>.ipynb\n○ report: hw1_<student_id>.pdf\n● Submit your source code and report to E3 before 11/11(Tue.) 23:59,  \nno late submissions will be accepted. \n● Failed to comply with above rules (under any circumstances) will cause a \ndeduction of 5 points to your score.\nIf you have any question about HW 1, please feel free to contact with TA : Chun-Wei Kang\nthrough email nick020789.cs13@nycu.edu.tw\n12",
+        "chunk_id": 34,
+        "content": "E3 Submission\nSubmission format:\n● hw1_<student_id>.zip\n○ source code: hw1_<student_id>.py or  hw1_<student ID>.ipynb\n○ report: hw1_<student_id>.pdf\n● Submit your source code and report to E3 before 11/11(Tue.) 23:59,  \nno late submissions will be accepted. ● Failed to comply with above rules (under any circumstances) will cause a \ndeduction of 5 points to your score.",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -588,8 +490,22 @@
         }
     },
     {
-        "chunk_id": 42,
-        "content": "Have Fun !\n13",
+        "chunk_id": 35,
+        "content": "If you have any question about HW 1, please feel free to contact with TA : Chun-Wei Kang\nthrough email nick020789.cs13@nycu.edu.tw\n12",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Generative Information Retrieval HW1",
+            "source": "2025 Generative Information Retrieval HW1.pdf",
+            "total_pages": 13,
+            "page": 11,
+            "page_label": "12"
+        }
+    },
+    {
+        "chunk_id": 36,
+        "content": "Have Fun ! 13",
         "metadata": {
             "producer": "PyPDF",
             "creator": "Google",
@@ -599,6 +515,314 @@
             "total_pages": 13,
             "page": 12,
             "page_label": "13"
+        }
+    },
+    {
+        "chunk_id": 37,
+        "content": "2025 Information Retrieval \nand Extraction HW2\n1",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 0,
+            "page_label": "1"
+        }
+    },
+    {
+        "chunk_id": 38,
+        "content": "Task Introduction\n● Measure photo relevance to a query\n○ Use any method to encode images or both images and text into the same space to \ncompare the similarity between images and query. ● Requirement\n○ Upload your submission to Kaggle\n○ Submit a report and your source code to E3\n2",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 1,
+            "page_label": "2"
+        }
+    },
+    {
+        "chunk_id": 39,
+        "content": "Dataset\n ● train.jsonl\n○ Contains queries and corresponding image IDs needed for training\n● train_images\n○ Contains train images needed for training\n● train_papers_latex\n○ Contains LaT eX folders for training (optional)\n● test.jsonl\n○ Contains queries that need to be used for prediction\n● test_images\n○ Contains test images needed for prediction\n● test_images.jsonl\n○ Contains test image captions and corresponding image IDs\n● test_papers_latex\n○ Contains LaT eX folders for prediction(optional)",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 2,
+            "page_label": "3"
+        }
+    },
+    {
+        "chunk_id": 40,
+        "content": "Training Data\ntrain.jsonl - each line is a json dict and contains following attributes:\n● query - String. The content of query\n● paper_id - String.",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 3,
+            "page_label": "4"
+        }
+    },
+    {
+        "chunk_id": 41,
+        "content": "Paper id\n● id - Integer. Unique query id\n● image_caption - String. Figure caption\n● image_id - Image ID of the photo\n4",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 3,
+            "page_label": "4"
+        }
+    },
+    {
+        "chunk_id": 42,
+        "content": "Testing Data\ntest.jsonl - each line is a json dict and contains following attributes:\n● query - String. the content of query\n● id - Integer.",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 4,
+            "page_label": "5"
+        }
+    },
+    {
+        "chunk_id": 43,
+        "content": "Unique query id. ● paper_id - String. Paper id\n● Please note that when making predictions for the T est set, you only need to consider images within the \nfolder named after the corresponding paper ID. 5",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 4,
+            "page_label": "5"
+        }
+    },
+    {
+        "chunk_id": 44,
+        "content": "Method 1 - Dual Encoder\n● Use an pretrained image encoder and a text encoder to encode data from both modalities, image \nand text, into the same embedding space\nResNet\nFCBERT\nFC\nCross Entroy\n[CLS]烏拉，呀\n哈，噗噜\n呀....... Use cross-entropy loss to map \nthe correct image-text pairs to a \nsimilar embedding space and \npush apart the incorrect pairs.",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 5,
+            "page_label": "6"
+        }
+    },
+    {
+        "chunk_id": 45,
+        "content": "6\n🔥\n🔥\n❄\n❄",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 5,
+            "page_label": "6"
+        }
+    },
+    {
+        "chunk_id": 46,
+        "content": "Method 2 - VLM captioning\n● Use a Vision Language Model(VLM) to generate a caption for each photo and compare the similarity \nbetween the caption and the text. VLM\n對不起中華隊，是我不懂\n棒球.......",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 6,
+            "page_label": "7"
+        }
+    },
+    {
+        "chunk_id": 47,
+        "content": "這是一張近期流行\n在網路上的道歉表，\n起源於... photo caption\nall-MiniLM-\nL6-v2\nSentenceTransformertext\n7",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 6,
+            "page_label": "7"
+        }
+    },
+    {
+        "chunk_id": 48,
+        "content": "Method 3 - Any reasonable way you can think\n8",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 7,
+            "page_label": "8"
+        }
+    },
+    {
+        "chunk_id": 49,
+        "content": "Kaggle\n● Kaggle link\n● Display team name : <student ID>\n● Submission format \n- A  404*2 .csv ﬁle, ﬁrst row is for the column name and the last 403 rows for your result. - Column name must be id and image_id.",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 8,
+            "page_label": "9"
+        }
+    },
+    {
+        "chunk_id": 50,
+        "content": "● There is one simple baseline and one strong baseline. Beat them to achieve a \nhigher score. 3 Image IDs \nseparated by \nspaces\n9",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 8,
+            "page_label": "9"
+        }
+    },
+    {
+        "chunk_id": 51,
+        "content": "Kaggle\n● The scoring metric is Recall@3. ● Y ou can submit at most 5 times each day. ● Y ou can choose 3 of the submissions to be considered for the private leaderboard, or will otherwise \ndefault to the best public scoring submissions. Y ou can only view your private leaderboard score after the competition has ended. ● Public leaderboard is calculated with 50% of the test data, and private leaderboard is calculated with \nother 50% of the test data, so the ﬁnal standings may be diﬀerent. ● Please tune your model parameters using your own validation set instead of adjusting parameters based \non the public leaderboard. Otherwise, it's easy to overﬁt, leading to poor performance on the private \nleaderboard.",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 9,
+            "page_label": "10"
+        }
+    },
+    {
+        "chunk_id": 52,
+        "content": "10",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 9,
+            "page_label": "10"
+        }
+    },
+    {
+        "chunk_id": 53,
+        "content": "Change your team name\nRemember to change the team name to <student ID>, or there will be a deduction of 5 points \nfor HW 2. 11",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 10,
+            "page_label": "11"
+        }
+    },
+    {
+        "chunk_id": 54,
+        "content": "Report Submission\nAnswer the following 3 questions:\n1. What kind of pre-processing did you apply to the photo or query? Additionally, please discuss \nhow diﬀerent preprocessing methods aﬀected the performance of the models? 2. How did you align the photo and query in the same embedding space? Use pretrained model or \ntrain your own?",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 11,
+            "page_label": "12"
+        }
+    },
+    {
+        "chunk_id": 55,
+        "content": "3. Please discuss based on your experimental results. How do you improve the performance of \nyour model? (e.g. add a module or try diﬀerent models and observing performance changes). What was the result? Please answer the questions in detail to receive full points for each question. 12",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 11,
+            "page_label": "12"
+        }
+    },
+    {
+        "chunk_id": 56,
+        "content": "Grading policy\n● Kaggle (70%) \n- 30% based on the public leaderboard score and 70% based on the private leaderboard score\n- Leaderboard score consists of basic score and ranking score\n■ Basic score :\nOver strong baseline : 55\nOver simple bassline : 40\nUnder simple baseline : 25\n■ Ranking score:\n15-(15/N)*(ranking-1), N=numbers of people in the interval\n● Report (30%)\n- 10 for each quesiton\n13",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 12,
+            "page_label": "13"
+        }
+    },
+    {
+        "chunk_id": 57,
+        "content": "E3 Submission\nSubmit your source code and report to E3 before 12/23 (Tue.) 23:59\nNo late submission !",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 13,
+            "page_label": "14"
+        }
+    },
+    {
+        "chunk_id": 58,
+        "content": "Follow the submission format or there will be a deduction of 5 points for HW 2 ! ● Format\n- source code : HW2_<student ID>.py  or  HW2_<student ID>.ipynb\n- report : HW2_<student ID>.pdf \nIf you have any question about HW 2, please feel free to contact with TA : BO-CHENG PAN\nthrough email kevinpan0930.cs13@nycu.edu.tw\n14",
+        "metadata": {
+            "producer": "PyPDF",
+            "creator": "Google",
+            "creationdate": "",
+            "title": "2025 Information Retrieval HW2",
+            "source": "2025 Information Retrieval HW2.pdf",
+            "total_pages": 14,
+            "page": 13,
+            "page_label": "14"
         }
     }
 ]
