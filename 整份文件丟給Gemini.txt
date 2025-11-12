@@ -1,0 +1,96 @@
+114-1 IR Final Project Requirements
+What is the total number of students allowed in a single group for the final project?
+一個專案小組最多允許 4名 學生 。
+
+小組人數範圍是 3到4名 學生 。
+
+
+What is the exact submission deadline for the final project report, including the date and time?
+12月15日 (Mon.) 23:59
+
+請注意，專案不接受任何逾期繳交。
+
+
+
+List the main components that should be covered in the Mid-term Project Results Presentation.
+中期專案成果展示 (Mid-term Project Results Presentation) 應涵蓋以下主要部分 ：
+
+
+簡介 (Introduction)：簡要概述您的問題 。說明這個問題的重要性 ，以及您將解決的資訊檢索 (IR) 任務 。
+
+
+文獻回顧 / 相關工作 (Literature Review / Related work)：描述您找到的與您的任務相關的其他工作或論文 。不能僅僅提及論文，您應至少簡要詳細說明它們使用的研究方法/它們與您的工作如何相關 。請提及您的工作與這些相關工作的關聯或差異 。
+
+
+
+
+資料集 (Dataset)：描述您正在使用的資料 ，包括資料集的大小 、類別分佈 ，以及您需要進行的任何預處理 。
+
+
+主要方法 (Main Approach)：提出一個用於解決您的任務的模型、演算法或框架 。您應詳細描述模型和演算法，並使用具體的例子來演示其工作原理 。請精確描述這些方法如何應用於您的問題 (例如，輸入/輸出、變數、因素、狀態等) 。
+
+
+
+
+評估方法 (Evaluation Methods)：明確指定至少一個您將用於定量評估的、定義明確、數值化、自動化的評估指標 。如果您對將進行的定性評估有任何具體想法，也可以描述 。
+
+
+
+初步結果 (Preliminary Results)：描述性能和您的初步結果分析 ，以判斷結果是否符合預期 。如果結果不符合您的預期，請思考您可以做些什麼來提高性能，並提出您的下一步計劃 。
+
+
+
+What percentage of the total grade is the Final Project Report worth?
+期末專案報告 (Final Project Report) 佔總成績的 15%
+
+
+
+In the final project, is making a demo for the work optional or mandatory?
+製作專案成果的 Demo (演示) 是可選的 (optional) 。
+
+報告中提到，鼓勵學生提交最終專案報告來展示成果，但製作 Demo 並非強制要求 。
+
+
+
+
+
+2025 Generative Information Retrieval HW1.pdf
+
+What is the deadline for HW1, and are late submissions accepted?
+HW1 的截止日期是（週二）23:59。 不接受遲交。
+
+
+For HW1, which two Sparse Retrieval methods must be implemented by the student from scratch?
+對於 HW1，學生必須從頭開始實作的兩種**稀疏檢索（Sparse Retrieval）**方法是：
+
+1.  **TF-IDF** (Term Frequency–Inverse Document Frequency)
+2.  **BM25** 
+
+作業明確要求您必須**自己實作** TF-IDF 和 BM25，並且**不能使用**現成的庫，例如 `BM25Okapi`、`cosine_similarity` 或 `TfidfVectorizer` 等。
+實作時必須**只使用 numpy**
+
+What is the final scoring metric for the HW1 Kaggle submission, as mentioned in the \"Requirements & Scoring Metrics\" section?
+HW1 Kaggle 提交的最終評分指標是 Recall@10。📈 評分指標細節Recall@10 的計算方式如下：對於每個查詢（Query），您需要輸出的 Top-10 最相似的 Code ID 3。如果**正確答案（ground-truth code ID）**出現在這 Top-10 的檢索結果中，該查詢計為 1 分。否則，計為 0 分。最終分數是所有查詢的平均值。🏆 基準分數文件提供了兩個基準線作為參考：隊伍分數 (Recall@10)Strong Baseline (強基準線)0.72000 8888Simple Baseline (簡基準線)0.52400 您需要在 Kaggle 上的表現目標是超越這些基準線，以獲得更高的分數
+
+
+
+According to the HW1 report submission guidelines, what is the first question that needs to be answered in the report?
+根據 HW1 報告提交指南，需要回答的第一個問題是 ：
+
+❓ 報告問題 1
+在稀疏檢索（Sparse Retrieval）方法中，比較 TF-IDF 和 BM25 的檢索性能 。哪種方法在這次作業中表現更好 ？
+
+您需要分析造成差異的可能原因（例如，詞頻處理、文件長度正規化） 。
+
+
+請記住，您需要詳細回答這個問題，才能獲得該題的滿分 。
+
+
+
+What is the penalty for failing to comply with the submission rules for HW1?
+
+未能遵守 HW1 的提交規則（例如，檔案命名格式不符、未在截止日期前提交等）將導致您的分數扣除 5 分。
+此外，在 Kaggle 提交方面，如果未將隊伍名稱更改為您的 <student ID> ，HW 1 也將被扣除 5 分
+📝 HW1 提交主要規則概要請務必遵守以下主要規則以避免扣分：截止日期：在（週二）23:59 之前提交，不接受遲交。
+E3 提交格式：一個 .zip 壓縮包，名稱為 hw1_<student_id>.zip 。
+內含原始碼檔案：hw1_<student_id>.py 或 hw1_<student ID>.ipynb 。內含報告檔案：hw1_<student_id>.pdf 。Kaggle 隊伍名稱：務必將您的隊伍名稱更改為 <student ID> 

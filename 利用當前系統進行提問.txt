@@ -1,0 +1,115 @@
+114-1 IR Final Project Requirements
+What is the total number of students allowed in a single group for the final project?
+答案: 根據提供的內容，沒有提及單一小組中允許的學生總人數。
+
+--- 參考來源 ---
+頁碼: 2, 內容: "hyperparameters   you   set,   experiment   results,   and   so   on.  ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each   member   with   proportions .   We   underst..."
+頁碼: 3, 內容: "presentation,   and   final   project   presentation   will   be   graded   on   your   presentation   performance   alone,   and   do   not   require   any   file   submission.   1.  The  submission ..."
+頁碼: 0, 內容: "below   (“Topics   Introduction”   section)   for   your   reference   and   inspiration   of   your   project.   Grading   The  final  project  score  is  composed  of  four  parts  (total  40%):   ●..."
+
+
+What is the exact submission deadline for the final project report, including the date and time?
+答案: 最終專案報告的提交截止日期是 **12/15 (Mon.) 23:59**。
+
+--- 參考來源 ---
+頁碼: 3, 內容: "presentation,   and   final   project   presentation   will   be   graded   on   your   presentation   performance   alone,   and   do   not   require   any   file   submission.   1.  The  submission ..."
+頁碼: 1, 內容: "inputs/outputs,   variables,   factors,   states,   etc.)?  ○  Evaluation  Methods  -  Specify  at  least  one  well-defined,  numerical,  automatic   evaluation   metric   you   will   use   for   qu..."
+頁碼: 0, 內容: "below   (“Topics   Introduction”   section)   for   your   reference   and   inspiration   of   your   project.   Grading   The  final  project  score  is  composed  of  four  parts  (total  40%):   ●..."
+
+
+
+
+List the main components that should be covered in the Mid-term Project Results Presentation.
+答案: 根據提供的內容，Mid-term Project Results Presentation 應涵蓋以下主要部分：
+
+*   **Introduction** - 簡要概述你的問題。為什麼這個問題可能很重要？你將解決哪些 IR 任務？
+*   **Literature Review / Related work** - 描述你找到的與你的任務相關的其他工作/論文。僅提及一篇論文是不夠的；你至少應該簡要說明他們使用什麼樣的方法/它如何與你的工作相關（如果不明確的話）。請同 時提及為什麼你的工作與他們相關。
+*   **Methods** - 描述你計劃或已經實施的實驗方法。這應該包括你將使用或已經使用的數據集、你將實施或已經實施的模型/演算法，以及你將如何評估你的結果。
+*   **Preliminary Results** - 報告你迄今為止的初步實驗結果。
+*   **Project Timeline** - 描述你項目的時間表，包括接下來的步驟和里程碑。
+
+--- 參考來源 ---
+頁碼: 0, 內容: "below   (“Topics   Introduction”   section)   for   your   reference   and   inspiration   of   your   project.   Grading   The  final  project  score  is  composed  of  four  parts  (total  40%):   ●..."
+頁碼: 2, 內容: "hyperparameters   you   set,   experiment   results,   and   so   on.  ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each   member   with   proportions .   We   underst..."
+頁碼: 1, 內容: "particular  ideas  about  the  qualitative  evaluation  you  will  do,  you  can  describe   that   too.  ●  Mid-term  Project  Results  Presentation  ( 11/11  in  class )  ○  You  will  present  the ..."
+
+
+
+
+What percentage of the total grade is the Final Project Report worth?
+
+答案: Final Project Report 佔總成績的 15%。
+
+--- 參考來源 ---
+頁碼: 0, 內容: "below   (“Topics   Introduction”   section)   for   your   reference   and   inspiration   of   your   project.   Grading   The  final  project  score  is  composed  of  four  parts  (total  40%):   ●..."
+頁碼: 2, 內容: "hyperparameters   you   set,   experiment   results,   and   so   on.  ○  Contribution  of  each  member  -  Please  include  the  contribution  of  each   member   with   proportions .   We   underst..."
+頁碼: 1, 內容: "We   note   that   making   a   demo   for   your   work   is   optional .   Below   is   a   full   description   of   what   you   should   include   in   your   final   project   report.   We   wil..."
+
+
+
+
+In the final project, is making a demo for the work optional or mandatory?
+答案: 根據提供的內容，為作品製作演示是**可選的 (optional)**。
+
+--- 參考來源 ---
+頁碼: 1, 內容: "We   note   that   making   a   demo   for   your   work   is   optional .   Below   is   a   full   description   of   what   you   should   include   in   your   final   project   report.   We   wil..."
+頁碼: 3, 內容: "presentation,   and   final   project   presentation   will   be   graded   on   your   presentation   performance   alone,   and   do   not   require   any   file   submission.   1.  The  submission ..."
+頁碼: 3, 內容: "that   you   have   run.   If   your   results   are   creative   and   can’t   find   a   proper   baseline,   then   you   can   analyze   how   you   get   the   results   you   want.  ○  Future  W..."
+
+
+
+
+
+2025 Generative Information Retrieval HW1.pdf
+
+What is the deadline for HW1, and are late submissions accepted?
+答案: HW1 的截止日期是 11/11 (週二) 23:59。不接受任何遲交的作業。
+
+--- 參考來源 ---
+頁碼: 7, 內容: "Kaggle Submission ● The scoring metric is Recall@10. ● Y ou can submit at most 5 times each day. ● Y ou can choose 2 of the submissions to be considered for the private leaderboard,  or will otherwise..."
+頁碼: 11, 內容: "E3 Submission Submission format: ● hw1_<student_id>.zip ○ source code: hw1_<student_id>.py or  hw1_<student ID>.ipynb ○ report: hw1_<student_id>.pdf ● Submit your source code and report to E3 before 1..."
+頁碼: 10, 內容: "Grading policy ● Kaggle (70%)  - 30% based on the public leaderboard score and 70% based on the private  leaderboard score - Leaderboard score consists of basic score and ranking score ■ Basic score :..."
+
+
+
+For HW1, which two Sparse Retrieval methods must be implemented by the student from scratch?
+答案: 根據提供的內容，學生必須從頭開始實作的兩個稀疏檢索方法是 **TF-IDF** 和 **BM25**。
+
+--- 參考來源 ---
+頁碼: 9, 內容: "Report Submission Answer the following 3 questions: 1. In Sparse Retrieval methods, compare the retrieval performance of TF-IDF and BM25.  Which method performs better in this assignment? Analyze the ..."
+頁碼: 0, 內容: "2025 Information Retrieval and Extraction HW 1 1..."
+頁碼: 5, 內容: "Requirements & Scoring Metrics ● Please implement both TF-IDF and BM25 as the scoring methods for Sparse Retrieval, and  additionally apply a Dense Retrieval approach using a pre-trained model (e.g., ..."
+
+
+
+
+What is the final scoring metric for the HW1 Kaggle submission, as mentioned in the \"Requirements & Scoring Metrics\" section?
+答案: 根據提供的內容，HW1 Kaggle 提交的最終評分指標是 **Recall@10**。
+
+--- 參考來源 ---
+頁碼: 7, 內容: "Kaggle Submission ● The scoring metric is Recall@10. ● Y ou can submit at most 5 times each day. ● Y ou can choose 2 of the submissions to be considered for the private leaderboard,  or will otherwise..."
+頁碼: 10, 內容: "Grading policy ● Kaggle (70%)  - 30% based on the public leaderboard score and 70% based on the private  leaderboard score - Leaderboard score consists of basic score and ranking score ■ Basic score :..."
+頁碼: 6, 內容: "Kaggle Submission ● kaggle link ● Display team name : <student ID> ● Submission format  - A  500*2 .csv ﬁle, ﬁrst row is for the column name and the last 500 rows for your result. - Column name must b..."
+
+
+According to the HW1 report submission guidelines, what is the first question that needs to be answered in the report?
+答案: 根據提供的內容，報告部分提到 "10 for each quesiton"，但**沒有列出任何具體的問題**。因此，無法得知報告中需要回答的第一個問題是什麼。
+
+--- 參考來源 ---
+頁碼: 10, 內容: "Grading policy ● Kaggle (70%)  - 30% based on the public leaderboard score and 70% based on the private  leaderboard score - Leaderboard score consists of basic score and ranking score ■ Basic score :..."
+頁碼: 2, 內容: "Dataset  ● code_snippets.csv - Code snippets and their corresponding Code IDs. ● train_queries.csv - Contains queries and corresponding code snippets. ● test_queries.csv - Contains queries that need t..."
+頁碼: 4, 內容: "Testing Data 5..."
+
+
+
+What is the penalty for failing to comply with the submission rules for HW1?
+如果未將隊伍名稱更改為`<student ID>`，HW1將扣除5分。
+
+--- 參考來源 ---
+頁碼: 8, 內容: "Change your team name Remember to change the team name to <student ID>, or there will be a deduction  of 5 points for HW 1. 9..."
+頁碼: 10, 內容: "Grading policy ● Kaggle (70%)  - 30% based on the public leaderboard score and 70% based on the private  leaderboard score - Leaderboard score consists of basic score and ranking score ■ Basic score :..."
+頁碼: 7, 內容: "Kaggle Submission ● The scoring metric is Recall@10. ● Y ou can submit at most 5 times each day. ● Y ou can choose 2 of the submissions to be considered for the private leaderboard,  or will otherwise..."
+
+
+
+

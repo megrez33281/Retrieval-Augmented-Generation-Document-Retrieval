@@ -86,6 +86,11 @@ def main():
     
     recall, mrr = evaluate_retriever(golden_set, EMBEDDING_MODEL)
 
+    print(f"\n--- Evaluation Results for: {EMBEDDING_MODEL} ---")
+    print(f"Recall@3: {recall:.4f}")
+    print(f"MRR:      {mrr:.4f}")
+    print("-------------------------------------------------")
+
 
 
 if __name__ == "__main__":

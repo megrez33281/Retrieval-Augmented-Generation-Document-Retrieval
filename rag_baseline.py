@@ -134,7 +134,7 @@ if __name__ == "__main__":
         
     # 注意：全域變數 PDF_PATH 在此互動模式下已無直接作用
     # 這裡我們示範如何為指定的檔案建立互動問答
-    pdf_to_query_name = "114-1 IR Final Project Requirements.pdf"
+    pdf_to_query_name = "2025 Generative Information Retrieval HW1.pdf"
     print(f"--- 正在為 {pdf_to_query_name} 建立互動式問答環境 ---")
 
     pipeline_components = setup_rag_pipeline(pdf_to_query_name, EMBEDDING_MODEL)
