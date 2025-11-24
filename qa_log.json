@@ -494,5 +494,65 @@
                 "page": 63
             }
         ]
+    },
+    {
+        "question": "What are the methodologies or algorithms for generating termsets in information retrieval?",
+        "answer": "[QUERY_REWRITE] What algorithms or methodologies are used for generating termsets from a given set of terms (e.g., query terms) in information retrieval?",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 9
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 5
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 66
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 65
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 24
+            }
+        ]
+    },
+    {
+        "question": "Term-Set Generation",
+        "answer": "Termsets是相關術語的集合，用於在基於集合的模型（Set-Based Model）中捕捉索引術語之間的相互依賴關係，以改善檢索結果。這些術語依賴關係是透過術語集（termsets）來獲取的。\n\n在一個集合中，所有術語組成了詞彙集（vocabulary-set）。對於一個查詢，術語集是從該查詢的術語中，根據詞彙集和集合中術語的共現關係來形成的。例如，對於查詢q = {a, b, d, n}，詞彙集中的術語會形成多個術語集。",
+        "sources": [
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 0
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 5
+            },
+            {
+                "source": "2025 Generative Information Retrieval HW1.pdf",
+                "page": 9
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 61
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 63
+            },
+            {
+                "source": "IRIE114-04_Classic_IR(final).pdf",
+                "page": 65
+            }
+        ]
     }
 ]

@@ -24,6 +24,42 @@
         "relevant_chunk_ids": [0]
     },
     {
+        "question": "In the final project, is making a demo for the work optional or mandatory?",
+        "answer": "It is optional.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [4]
+    },
+    {
+        "question": "How long is the initial project proposal presentation?",
+        "answer": "3 minutes.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [0]
+    },
+    {
+        "question": "What is the date for the Mid-term Project Results Presentation?",
+        "answer": "11/11 in class.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [2]
+    },
+    {
+        "question": "If a team's contributions are significantly unequal, what might happen?",
+        "answer": "The score will be adjusted.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [7]
+    },
+    {
+        "question": "What is the penalty for submitting the final project report with the wrong file or naming format?",
+        "answer": "-10 points to your score.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [9]
+    },
+    {
+        "question": "How many parts compose the final project score?",
+        "answer": "Four parts.",
+        "source_file": "114-1 IR Final Project Requirements.pdf",
+        "relevant_chunk_ids": [0]
+    },
+    {
         "question": "What is the deadline for HW1, and are late submissions accepted?",
         "answer": "The deadline is 11/11 (Tue.) 23:59, and no late submissions will be accepted.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
@@ -48,15 +84,99 @@
         "relevant_chunk_ids": [31]
     },
     {
-        "question": "In the final project, is making a demo for the work optional or mandatory?",
-        "answer": "It is optional.",
-        "source_file": "114-1 IR Final Project Requirements.pdf",
-        "relevant_chunk_ids": [4]
-    },
-    {
         "question": "What is the penalty for failing to comply with the submission rules for HW1?",
         "answer": "A deduction of 5 points.",
         "source_file": "2025 Generative Information Retrieval HW1.pdf",
         "relevant_chunk_ids": [34]
+    },
+    {
+        "question": "What file contains the queries that need to be used for prediction in HW1?",
+        "answer": "test_queries.csv",
+        "source_file": "2025 Generative Information Retrieval HW1.pdf",
+        "relevant_chunk_ids": [20]
+    },
+    {
+        "question": "For HW1, how many of the most similar code IDs should be outputted for each query?",
+        "answer": "top-10",
+        "source_file": "2025 Generative Information Retrieval HW1.pdf",
+        "relevant_chunk_ids": [24]
+    },
+    {
+        "question": "How many times a day can a user submit to the HW1 Kaggle competition?",
+        "answer": "At most 5 times each day.",
+        "source_file": "2025 Generative Information Retrieval HW1.pdf",
+        "relevant_chunk_ids": [28]
+    },
+    {
+        "question": "In the HW1 grading policy, how much is the report worth?",
+        "answer": "30%",
+        "source_file": "2025 Generative Information Retrieval HW1.pdf",
+        "relevant_chunk_ids": [33]
+    },
+    {
+        "question": "In HW1, what file contains the code snippets and their IDs?",
+        "answer": "code_snippets.csv",
+        "source_file": "2025 Generative Information Retrieval HW1.pdf",
+        "relevant_chunk_ids": [20]
+    },
+    {
+        "question": "What is the main task in HW2?",
+        "answer": "Measure photo relevance to a query.",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [38]
+    },
+    {
+        "question": "In the HW2 dataset, what file contains the test image captions?",
+        "answer": "test_images.jsonl",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [39]
+    },
+    {
+        "question": "What is one of the suggested methods for HW2 that involves using a Vision Language Model (VLM)?",
+        "answer": "Use a VLM to generate a caption for each photo.",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [46]
+    },
+    {
+        "question": "What is the required column name for the image ID in the HW2 Kaggle submission file?",
+        "answer": "image_id",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [49]
+    },
+    {
+        "question": "What is the scoring metric for the HW2 Kaggle competition?",
+        "answer": "Recall@3",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [51]
+    },
+    {
+        "question": "How many submissions can be chosen for the private leaderboard in HW2?",
+        "answer": "3",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [51]
+    },
+    {
+        "question": "What is the penalty for not changing the team name to '<student ID>' for HW2?",
+        "answer": "A deduction of 5 points.",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [53]
+    },
+    {
+        "question": "What is the second question that needs to be answered in the HW2 report?",
+        "answer": "How did you align the photo and query in the same embedding space?",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [54]
+    },
+    {
+        "question": "What is the submission deadline for HW2?",
+        "answer": "12/23 (Tue.) 23:59.",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [57]
+    },
+    {
+        "question": "For HW2, what two components make up the leaderboard score?",
+        "answer": "Basic score and ranking score.",
+        "source_file": "2025 Information Retrieval HW2.pdf",
+        "relevant_chunk_ids": [56]
     }
 ]
