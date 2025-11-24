@@ -217,7 +217,7 @@ python evaluate.py
 ## 評估結果-語意Chunking
   
 ### 詳細檢索結果
-以下為改進Chunking方式為語意Chunking後執行`evaluate.py`腳本對每個問題進行Chunk檢索的詳細狀況：
+在將`golden_set.json`擴充至30個問題後，我們重新執行了評估腳本。以下為改進Chunking方式為語意Chunking後，對30個問題進行檢索的詳細狀況：
 
 | 問題 (縮寫)                                  | 正確答案 (Chunk IDs) | 檢索結果 (Chunk IDs) | 是否命中 |
 | -------------------------------------------- | -------------------- | -------------------- | -------- |
@@ -227,34 +227,127 @@ python evaluate.py
 | List the main components that should be...   | `[2, 3]`          | `[2, 0, 4]`         | True  |
 | What percentage of the total grade is...     | `[0]`                | `[0, 7, 9]`         | True  |
 | In the final project, is making a demo...    | `[4]`             | `[9, 0, 4]`         | True  |
+| How long is the initial project proposal...  | `[0]`                | `[9, 2, 0]`         | True     |
+| What is the date for the Mid-term Project... | `[2]`                | `[9, 2, 0]`         | True     |
+| If a team's contributions are significantly unequal... | `[7]`      | `[7, 9, 17]`        | True     |
+| What is the penalty for submitting the final project report... | `[9]` | `[9, 3, 0]`    | True     |
+| How many parts compose the final project score? | `[0]`             | `[0, 9, 7]`         | True     |
 | **來源: 2025 Generative Information Retrieval HW1.pdf** |                      |                      |          |
 | What is the deadline for HW1, and are...     | `[19, 34]`           | `[35, 34, 40]`       | True  |
 | For HW1, which two Sparse Retrieval...       | `[19, 24]`               | `[31, 18, 19]`       | True  |
-| What is the final scoring metric for...      | `[25]`           | `[23, 28, 25]`       | True  |
+| What is the final scoring metric for...      | `[25]`           | `[33, 28, 25]`       | True  |
 | According to the HW1 report submission...    | `[31]`               | `[35, 18, 34]`       | False |
-| What is the penalty for failing to...        | `[34]`           | `[35, 34, 30]`       | True  |
-  
-**分析**:
-* 優點
-  大多數問題都能成功召回至少一個相關的數據塊 (Recall@3 = 0.9)
-  特別是對於日期、截止日期等關鍵字明確的問題，檢索效果很好
-* 待改進 
-  一個問題檢索失敗，並且這個失敗案例在上一次更換Chunking方式前也失敗了  
+| What is the penalty for failing to comply... | `[34]`           | `[35, 34, 30]`       | True  |
+| What file contains the queries that need...  | `[20]`               | `[18, 20, 35]`       | True     |
+| For HW1, how many of the most similar code IDs... | `[24]`          | `[24, 25, 18]`       | True     |
+| How many times a day can a user submit...    | `[28]`               | `[28, 33, 26]`       | True     |
+| In the HW1 grading policy, how much is the report... | `[33]`       | `[33, 25, 30]`       | True     |
+| In HW1, what file contains the code snippets... | `[20]`            | `[24, 20, 35]`       | True     |
+| **來源: 2025 Information Retrieval HW2.pdf** |                      |                      |          |
+| What is the main task in HW2?                | `[38]`               | `[58, 37, 53]`       | False    |
+| In the HW2 dataset, what file contains the test image... | `[39]`   | `[37, 58, 39]`       | True     |
+| What is one of the suggested methods for HW2... | `[46]`          | `[46, 37, 58]`       | True     |
+| What is the required column name for the image ID... | `[49]`      | `[49, 41, 58]`       | True     |
+| What is the scoring metric for the HW2...    | `[51]`               | `[56, 51, 58]`       | True     |
+| How many submissions can be chosen for the private... | `[51]`      | `[51, 58, 53]`       | True     |
+| What is the penalty for not changing the team name... | `[53]`     | `[53, 58, 49]`       | True     |
+| What is the second question that needs to be answered... | `[54]`   | `[58, 37, 55]`       | False    |
+| What is the submission deadline for HW2?     | `[57]`               | `[58, 37, 57]`       | True     |
+| For HW2, what two components make up the... | `[56]`                | `[51, 58, 56]`       | True     |
 
-   
-### 質化分析
-為了深入了解檢索失敗的原因，對失敗案例進行質化分析
+**Recall@3:** 0.9000  
+**MRR:**      0.6222 
+
+**分析**:  
+* **優點**
+  在擴充至30個問題的更廣泛測試集上，系統依然表現出強勁的性能，**Recall@3** 達到 **0.9**  
+  這證明語意分塊（Semantic Chunking）策略在多數情況下是有效的，能夠將語意相關的資訊聚合在一起，方便檢索 
+
+* **待改進**
+  擴大測試後，出現了3個檢索失敗案例，值得進行深入的錯誤分析  
+  這些案例揭示了當前檢索模型在特定場景下的短版  
+
+  
+### 質化分析 (Qualitative Analysis)
+為了深入了解檢索失敗的原因，我們對3個失敗案例進行質化分析  
+
+#### 失敗案例 1
 - **問題**: `"According to the HW1 report submission guidelines, what is the first question that needs to be answered in the report?"`
 - **正確答案 Chunk ID**: `[31]`
 - **系統檢索到的 Chunk IDs**: `[35, 18, 34]`
-#### 錯誤分析  
-- **正確的 Chunk (ID 31)**:
-  包含了明確的答案`"Report Submission\nAnswer the following 3 questions:..."`  
-  並且其實蠻明顯的
-- **錯誤檢索的 Chunk (ID 35, 18, 34)**:
-  這些區塊或多或少提到了`question`、`ubmission`、`HW1`等關鍵字，但實際上完全不相關  
-  推測還是這個問題對於語意的理解要求比較嚴格  
 
+**內容比對**:
+- **正確的 Chunk (ID 31)**:
+  此區塊內容為 `"Report Submission\nAnswer the following 3 questions:\n1. In Sparse Retrieval methods, compare the retrieval performance of TF-IDF and BM25..."`。它明確地列出了報告需要回答的第一個問題  
+- **錯誤檢索的 Chunk (ID 35, 18, 34)**:
+  - Chunk 35: 內容是關於聯繫助教的資訊 (`"If you have any question about HW 1, please feel free to contact with TA..."`)  
+  - Chunk 18: HW1的標題頁 (`"2025 Information Retrieval and Extraction\nHW 1"`)  
+  - Chunk 34: 關於E3繳交格式的說明 (`"E3 Submission\nSubmission format: ● hw1_<student_id>.zip..."`)  
+
+**深度錯誤分析**:
+這次失敗應是**語意干擾 (Semantic Interference)**與**關鍵詞稀釋 (Keyword Dilution)**的結果 
+1.  **語意干擾**  
+問題中包含了`"report submission guidelines"`和`"question"`這兩個概念  
+雖然正確答案Chunk 31完美匹配，但系統檢索到的Chunk 35同樣包含`"question about HW 1"`，Chunk 34 包含`"Submission format"`  
+這些區塊雖然與「報告繳交」或「問題」相關，但其主題分別是「尋求協助」和「檔案格式」，而非「報告內容」  
+嵌入模型顯然被這些共享的關鍵詞（如 `question`, `submission`, `HW1`）所干擾，無法精準區分「關於報告內容的問題」與「關於作業本身的問題」  
+2.  **上下文理解不足**  
+模型未能捕捉到問題的真正意圖——「尋找報告中需要回答的第一個具體問題」  
+它只進行了表層的關鍵詞匹配，召回了任何與「HW1報告」或「問題」沾邊的區塊，導致了這次的檢索失敗  
+這反映了輕量級模型在處理帶有特定限制條件（如 "first question"）的複雜查詢時的能力短版  
+
+---
+#### 失敗案例 2
+- **問題**: `"What is the main task in HW2?"`
+- **正確答案 Chunk ID**: `[38]`
+- **系統檢索到的 Chunk IDs**: `[58, 37, 53]`
+
+**內容比對**:
+- **正確的 Chunk (ID 38)**:
+  此區塊內容為 `"Task Introduction\n● Measure photo relevance to a query..."`，直接闡述了作業的核心任務  
+- **錯誤檢索的 Chunk (ID 58, 37, 53)**:
+  - Chunk 58: 關於HW2的繳交格式與助教聯絡資訊  
+  - Chunk 37: HW2的標題頁  
+  - Chunk 53: 關於HW2更改隊伍名稱的扣分規則  
+
+**深度錯誤分析**:
+這次的失敗原因可歸結為**通用詞彙的向量污染 (Vector Pollution from General Terms)**
+1.  **主題詞過於通用**  
+  問題中的核心詞 "main task"`和`"HW2"`都非常通用    
+  雖然正確答案 Chunk 38 的標題就是 `"Task Introduction"`，但被召回的錯誤區塊（如 37, 53, 58）也反覆出現`"HW 2"`這個詞，並且它們的內容（如扣分、繳交格式）在文件中通常被視為「重要事項」，可能在向量空間中佔據了較強的權重  
+2.  **語意層級區分失敗**:   
+  檢索器未能理解 `"main task"`是一個指向「目標描述」的語意指令，而將其視為一個普通詞彙  
+  因此，它召回了所有與 `"HW2"` 強相關，但語意層級完全不同的區塊（如標題頁、格式規定、扣分懲罰）  
+  這表明模型對於篇章結構（如標題、引言、規定）的理解能力有限，無法區分「描述任務本身」的內容和「關於任務的元資訊」  
+
+---
+#### 失敗案例 3
+- **問題**: `"What is the second question that needs to be answered in the HW2 report?"`
+- **正確答案 Chunk ID**: `[54]`
+- **系統檢索到的 Chunk IDs**: `[58, 37, 55]`
+
+**內容比對**:
+- **正確的 Chunk (ID 54)**:
+  此區塊內容為 `"Report Submission\nAnswer the following 3 questions:\n1. ... \n2. How did you align the photo and query..."`，明確列出了第二個問題  
+- **錯誤檢索的 Chunk (ID 58, 37, 55)**:
+  - Chunk 58: HW2的繳交格式與助教聯絡資訊  
+  - Chunk 37: HW2的標題頁  
+  - Chunk 55: **報告要回答的第三個問題** (`"3. Please discuss based on your experimental results..."`)  
+
+**深度錯誤分析**:
+這次失敗是一個非常微妙且具代表性的**序列與鄰近性錯誤 (Ordinal & Proximity Error)**  
+1.  **對序數詞不敏感**  
+嵌入模型對於`"second"`這個序數詞幾乎沒有辨識能力  
+它能成功將問題的語意定位到「HW2 報告問題」這個主題，但無法區分「第一個」、「第二個」或「第三個」問題  
+2.  **鄰近性干擾**  
+系統召回了Chunk 55（第三個問題），這證明了它知道要去尋找報告問題列表  
+然而，Chunk 54（正確答案）和 Chunk 55（錯誤答案）在原始文件和向量空間中都非常接近  
+在沒有精準理解 "second" 的情況下，模型可能因為某些微小的向量差異（例如 Chunk 55 中包含了 "experimental results"、"performance" 等可能被視為更重要的詞）而優先選擇了 Chunk 55  
+3.  **通用區塊的再次干擾**  
+Chunk 58（繳交格式）和 Chunk 37（標題頁）的再次出現，印證了前述案例的分析：這些包含高頻關鍵詞（`HW2`, `submission`）的通用性區塊，對於缺乏精細語意理解能力的模型來說，是強力的干擾源  
+
+總體而言，這三個失敗案例共同指向了當前模型的核心弱點：**對於超越關鍵詞匹配的、更深層次的語意關係（如意圖、序列、層級）理解不足**  
+這為後續的優化（如更換更強大的嵌入模型、引入重排序器）提供了明確的方向   
 
 
 ## 進階評估：模型比較
