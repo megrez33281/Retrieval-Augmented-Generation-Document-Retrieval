@@ -5,7 +5,7 @@
 
 ![系統架構圖](系統架構圖.png)
 
-[![Demo Video](Demo.png)](Demo.mp4)
+[![Demo Video](https://img.youtube.com/vi/5Qq8JW3w38E/hqdefault.jpg)](https://www.youtube.com/watch?v=5Qq8JW3w38E)
 
 ## 功能特色
 - 使用`sentence-transformers`進行語意向量化  
