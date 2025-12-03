@@ -5,6 +5,8 @@
 
 ![系統架構圖](系統架構圖.png)
 
+[![Demo Video](Demo.png)](Demo.mp4)
+
 ## 功能特色
 - 使用`sentence-transformers`進行語意向量化  
 - 使用`FAISS`進行高效的向量檢索  
