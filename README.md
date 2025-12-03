@@ -1,12 +1,15 @@
-# RAG 問答系統 Demo
+# RAG 問答系統
 
 這是一個基於「檢索增強生成」(Retrieval-Augmented Generation, RAG) 技術的命令列問答系統  
-它能讀取指定的PDF文件作為知識庫，並使用大型語言模型(LLM)來回答使用者針對文件內容提出的問題   
+它能讀取指定的PDF文件作為知識庫，並使用大型語言模型(LLM)來回答使用者針對文件內容提出的問題    
 
+**系統架構圖**  
 ![系統架構圖](系統架構圖.png)
 
+  
+**Demo**  
 [![Demo Video](https://img.youtube.com/vi/5Qq8JW3w38E/hqdefault.jpg)](https://www.youtube.com/watch?v=5Qq8JW3w38E)
-
+  
 ## 功能特色
 - 使用`sentence-transformers`進行語意向量化  
 - 使用`FAISS`進行高效的向量檢索  
