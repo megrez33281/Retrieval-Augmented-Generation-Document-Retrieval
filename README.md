@@ -3,6 +3,7 @@
 這是一個基於「檢索增強生成」(Retrieval-Augmented Generation, RAG) 技術的命令列問答系統  
 它能讀取指定的PDF文件作為知識庫，並使用大型語言模型(LLM)來回答使用者針對文件內容提出的問題   
 
+![系統架構圖](系統架構圖.png)
 
 ## 功能特色
 - 使用`sentence-transformers`進行語意向量化  
