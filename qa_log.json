@@ -554,5 +554,185 @@
                 "page": 65
             }
         ]
+    },
+    {
+        "question": "List the main components that should be covered in the Mid-term Project Results Presentation.",
+        "answer": "中期專案成果發表會應涵蓋以下主要內容：\n*   介紹 - 簡要概述你的問題。\n*   已調查的相關工作。\n*   已實作的方法。\n*   初步結果。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            }
+        ]
+    },
+    {
+        "question": "What percentage of the total grade is the Final Project Report worth?",
+        "answer": "Final Project Report 佔總成績的 15%。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 2
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-10_Multimodal Retrieval (v2).pdf",
+                "page": 31
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            }
+        ]
+    },
+    {
+        "question": "In the final project, is making a demo for the work optional or mandatory?",
+        "answer": "在期末專案中，製作 demo 是**可選的 (optional)**。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 34
+            }
+        ]
+    },
+    {
+        "question": "List the main components that should be covered in the Mid-term Project Results Presentation.",
+        "answer": "在期中專案成果發表會中，應涵蓋以下主要部分：\n1.  **介紹 (Introduction)**：簡要概述你的問題。\n2.  **相關工作 (Related Work)**：你所調查的相關研究。\n3.  **實施方法 (Methods Implemented)**：你所實施的方法。\n4.  **初步結果 (Preliminary Results)**：你的初步成果。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 12
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            }
+        ]
+    },
+    {
+        "question": "What percentage of the total grade is the Final Project Report worth?",
+        "answer": "Final Project Report 佔總成績的 15%。",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 2
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-10_Multimodal Retrieval (v2).pdf",
+                "page": 31
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            }
+        ]
+    },
+    {
+        "question": "In the final project, is making a demo for the work optional or mandatory?",
+        "answer": "In the final project, making a demo for your work is optional.",
+        "sources": [
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 3
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 0
+            },
+            {
+                "source": "114-1 IR Final Project Requirements.pdf",
+                "page": 1
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 13
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 6
+            },
+            {
+                "source": "IRIE114-01_Introduction_of_the_Course.pdf",
+                "page": 34
+            }
+        ]
     }
 ]

@@ -278,7 +278,7 @@ if __name__ == "__main__":
     llm = ChatGoogleGenerativeAI(model=LLM_MODEL)
     
     # --- 2. 設定主要和補充檢索器 ---
-    pdf_to_query_name = "2025 Generative Information Retrieval HW1.pdf"
+    pdf_to_query_name = "114-1 IR Final Project Requirements.pdf"
     print(f"\n--- 正在為 '{pdf_to_query_name}' 設定主要知識庫 ---")
     primary_retriever = setup_primary_retriever(pdf_to_query_name, EMBEDDING_MODEL, embeddings)
     
